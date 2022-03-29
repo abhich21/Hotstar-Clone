@@ -1,0 +1,34 @@
+.nav{
+    height: 75px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    background-color: #131a27;
+    justify-content: space-between;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 50px;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 50px;
+}
+.nav-left>div{
+    cursor: pointer;
+}
+.nav-right>div{
+    cursor: pointer;
+}
+.disney-img{
+    width: 150px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
