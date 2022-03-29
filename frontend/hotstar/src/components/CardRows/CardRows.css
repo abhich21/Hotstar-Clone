@@ -1,0 +1,25 @@
+.card>img{
+    height: 300px;
+    transition-duration: 0.5s;
+    
+}.card{
+    height: 340px;
+    margin-top: 20px;
+}
+.card>img:hover{
+    transform: scale(1.33);
+    
+}
+.cardContainer{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    
+}
+.row-title{
+ margin-left: 35px;
+}
+.cardContainer::-webkit-scrollbar {
+    display: none;
+  }
+
