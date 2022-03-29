@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #res{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6,200px);
+            grid-gap: 20px;
+        }
+        #res img{
+            width: 200px;
+            height: 300px;
+        }
+        #res div{
+            display: flex;
+            flex-wrap: wrap;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>TMDDB</h2><br>
+    <div id = "res">
+
+    </div>
+</body>
+</html>
+
+<script>
+    const div = document.getElementById('res')
+    const fun = async ()=>{
+        try {
+            // const a = await fetch(`https://api.themoviedb.org/4/list/1?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77`)  //American traiding movies
+            // const a = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&with_origin_country=IN') //for indian movies
+            
+            // const a = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${"3e3f0a46d6f2abc8e557d06b3fc21a77"}&language=hi-IN&region=IN&sort_by=popularity.desc&page=1&primary_release_year=2018&with_original_language=hi`) //hindi movies
+            let api = "3e3f0a46d6f2abc8e557d06b3fc21a77"
+            let url 
+            let ln
+            ln = "tn"  
+            ln = "bn"  // bangali language
+            ln = "ml"  // malyalam
+            ln = "ta"  // temil
+            ln = "mr"  // marathi
+            ln = "hi"
+            ln = "te"  //south tamil
+            url = `https://api.themoviedb.org/3/discover/movie?api_key=${api}&with_original_language=${ln}&language=${ln}&sort_by=original_title.asc&year=2022`
+            const a = await fetch(url)
+            const b = await a.json()
+            console.log(b)
+            display(b.results)
+        } catch (error) {
+            console.log({
+                message : error.message,
+                location : "index.html"
+            })
+        }
+    }
+    fun()
+    function display(arr){
+        arr.map(el=>{
+            const box = document.createElement('div')
+            const { poster_path,title,original_language} = el
+            const img = document.createElement('img')
+            const x = 'https://image.tmdb.org/t/p/original'
+            img.src = x+poster_path
+            const h3 = document.createElement('h3')
+            h3.textContent = title
+            const p = document.createElement('h5')
+            p.textContent = original_language
+            box.append(img,h3,p)
+            div.appendChild(box)
+        })
+    }
+</script>
