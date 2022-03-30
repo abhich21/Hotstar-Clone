@@ -1,5 +1,5 @@
 .banner-container{
-    height: 550px;
+    height: 400px;
     width: 95%;
     margin: auto;
     display: flex;
@@ -22,7 +22,6 @@ margin-top: 100px;
 .banner-right{
     width: 70%;
     height: 100%;
- background-image: url("https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/5603/1145603-h-3038c1e973f7");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -37,7 +36,7 @@ margin-top: 100px;
      rgba(0, 0, 0,0));
 }
 .banner-descr{
-  font-size: 22px;
+  font-size: 20px;
   color: #cdced1;
   font-weight:600;
 }
