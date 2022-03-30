@@ -4,7 +4,7 @@ Backend :
 Base-api : https://hotstar-v.herokuapp.com
 
 routes : 
-1.   /movies?language=<<language>>
+1.   /movies?language=<language>
 2.   /tv?language=<<language>>
 3.   /search?q=<<query>> 
 
