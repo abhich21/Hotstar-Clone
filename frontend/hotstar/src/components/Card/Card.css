@@ -1,7 +1,7 @@
 .row-card{  
     border-radius: 5px;
-    width: 169px;
-    height: 224px;
+    width: 200px;
+    height: 265px;
     transition-duration: 0.4s;
     transition-delay: 0.3s;
     background-size:cover ;
@@ -12,15 +12,15 @@
 }
 
 .wrap{
-    width: 169px;
-    height: 224px;
+    width: 200px;
+    height: 265px;
     margin: 0;  
     
 }
 
 .card-gradient{
-    width: 169px;
-    height: 224px;
+    width: 200px;
+    height: 265px;
     margin: 0;
     
     background-image: linear-gradient(to top,

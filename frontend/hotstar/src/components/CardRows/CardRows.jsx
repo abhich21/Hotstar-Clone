@@ -6,13 +6,14 @@ import { Card } from "../Card/Card";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-
+  
 
 
 function CardRows({ row_title, language }) { 
+  console.log(language)
   const [data, setData] = useState([])
   const getData = async () => {
-    const url = `https://hotstar-v.herokuapp.com/movies?language=${language || "en"}`
+    const url = `https://hotstar-v.herokuapp.com/movies?language=${language || "hi"}`
     const a = await axios.get(url)
     setData(a.data.results)
   }

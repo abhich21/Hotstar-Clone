@@ -1,8 +1,7 @@
 
 .card-container{
     display: flex;
-    height: 224px;
-    /* margin-top: 50px; */
+    height: 310px;
     gap: 10px;
     overflow: scroll;
     align-items: center;    

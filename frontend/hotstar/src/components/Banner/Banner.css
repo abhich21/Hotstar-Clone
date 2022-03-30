@@ -1,5 +1,5 @@
 .banner-container{
-    height: 400px;
+    height: 500px;
     width: 95%;
     margin: auto;
     display: flex;
@@ -7,9 +7,7 @@
 
     
 }
-.banner-details{
-margin-top: 100px;
-}
+
 
 .banner-left{
   width: 30%;
@@ -17,6 +15,10 @@ margin-top: 100px;
   background-color: black;
   color: rgb(255, 255, 255);
   text-align: left;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
  
 }
 .banner-right{
@@ -40,6 +42,22 @@ margin-top: 100px;
   color: #cdced1;
   font-weight:600;
 }
-.banner-details{
-  margin-left: 35px;
+
+.btns>div{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.btns{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: #cdced1;
+}
+
+.btns>div>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
 }
