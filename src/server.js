@@ -1,38 +1,51 @@
- const express = require('express')
- const app = express()
+const express = require('express')
+const app = express()
 const mongodbConnect = require('./config/db')
 
 
 
 const movieController = require('./controllers/movie.controller')
+const port = process.env.PORT || 7000
 // app.use('/', movieController)
-app.use('/', async (req,res)=>{
+app.use(express.json())
+app.use('/', async (req, res) => {
     try {
         return res
-        .send({
-            app : "hotstar"
-        })
+            .send({
+                app: "hotstar"
+            })
     } catch (error) {
         return res
-        .status(500)
-        .send({
-            message : error.message,
-            location : "movie.controller"
-        })
+            .status(500)
+            .send({
+                message: error.message,
+                location: "movie.controller"
+            })
+    }
+})
+app.use('/home', async (req, res) => {
+    try {
+        return res.send("You are on HOME page")
+    } catch (error) {
+        return res
+            .status(500)
+            .send({
+                message: error.message,
+                location: "movie.controller"
+            })
     }
 })
 
-const port = process.env.PORT || 7000 
-module.exports = ()=>{
+module.exports = () => {
     try {
-        app.listen(port, async ()=>{
+        app.listen(port, async () => {
             // await mongodbConnect()
             console.log(`Server is running on the port ${port}`)
         })
     } catch (error) {
         console.log({
-            message : error.message,
-            location : "server.js"
+            message: error.message,
+            location: "server.js"
         })
     }
 }
