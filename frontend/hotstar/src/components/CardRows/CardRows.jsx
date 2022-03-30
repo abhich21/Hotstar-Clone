@@ -18,11 +18,15 @@ function CardRows() {
               }}
               className="row-card"
             >
-              <div className="card-gradient">
-                <div className="card-content">
-                  <h3>title</h3> 
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio incidunt voluptas ipsam delectus sequi temporibus.</p>
-                  
+              <div className="wrap">
+                <div className="card-gradient">
+                  <div className="card-content">
+                    <h3>title</h3>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Optio incidunt voluptas ipsam delectus sequi temporibus.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
