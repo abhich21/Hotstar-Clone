@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/abhich21/Hotstar-Clone#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongoose": "^6.2.9"
-  },
-  "devDependencies": {}
+    "mongoose": "^6.2.9",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "uuid": "^8.3.2"
+  }
 }
