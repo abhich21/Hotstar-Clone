@@ -8,7 +8,7 @@ const movieController = require('./controllers/movie.controller')
 app.use('/', movieController)
 
 
-const port = 7000 || PORT
+const port = process.env.PORT || 7000 
 module.exports = ()=>{
     try {
         app.listen(port, async ()=>{
