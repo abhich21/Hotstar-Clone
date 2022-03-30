@@ -1,9 +1,13 @@
-
+import Banner from "../Banner/Banner";
+import CardRows from "../CardRows/CardRows";
 
 function IndividualPage() {
   return (
-    <div>IndividualPage</div>
-  )
+    <div>
+      <Banner></Banner>
+      <CardRows></CardRows>
+    </div>
+  );
 }
 
-export default IndividualPage
+export default IndividualPage;
