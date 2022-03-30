@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/abhich21/Hotstar-Clone#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
   }
