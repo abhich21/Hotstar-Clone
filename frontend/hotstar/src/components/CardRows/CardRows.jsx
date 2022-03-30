@@ -6,13 +6,13 @@ import { Card } from "../Card/Card";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom"
 
 
-function CardRows({ row_title, language }) {
-
+function CardRows({ row_title, language }) { 
   const [data, setData] = useState([])
   const getData = async () => {
-    const url = `https://hotstar-v.herokuapp.com/movies?language=${language}`
+    const url = `https://hotstar-v.herokuapp.com/movies?language=${language || "en"}`
     const a = await axios.get(url)
     setData(a.data.results)
   }
@@ -21,14 +21,15 @@ function CardRows({ row_title, language }) {
     <div className="row-title">
       <h3>{row_title}</h3>
       <div className="card-container">
-        {data.map(el => <Card
+        {data.map(el =><Link to={`/movie/${el.id}`}> <Card
           key={el.id}
           id={el.id}
           title={el.title}
           imageUrl={el.poster_path}
           discription={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Optio incidunt voluptas ipsam delectus sequi temporibus.`}
-        />)}
+        />
+        </Link>)}
       </div>
     </div>
   );

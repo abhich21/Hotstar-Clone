@@ -1,7 +1,7 @@
 
 import "./Banner.css";
 
-function Banner({ title, year , genre, discription,img}) {
+function Banner({ title, year , genre, description,img}) {
   return (
     <div className="banner-container">
       <div className="banner-left">
@@ -11,7 +11,7 @@ function Banner({ title, year , genre, discription,img}) {
             <span> {genre}</span>
           </div>
           <p className="banner-descr">
-            {discription}
+            {description}
           </p>
         </div>
       </div>

@@ -43,18 +43,18 @@ function MainPage() {
   ]
 
   const row_titles = [
-    { categorie : "Popular Shows",language : "en" },
-    { categorie : "Latest & Trending",language : "hi" },
-    { categorie : "Shows Recommended For You",language : "ta" },
-    { categorie : "Popular Movies",language : "ml" },
-    { categorie : "Movies Recommended For You",language : "te" }
+    { category : "Popular Shows",language : "en" },
+    { category : "Latest & Trending",language : "hi" },
+    { category : "Shows Recommended For You",language : "ta" },
+    { category : "Popular Movies",language : "ml" },
+    { category : "Movies Recommended For You",language : "te" }
   ]
   return (
     <div>
       <Carousel autoPlay interval={5000} infiniteLoop showStatus={false} showIndicators={false} transitionTime={700} showThumbs={false}>
-        {data.map((el,index) => <Banner key={index} img={el.img} title={el.title} genre={el.genre} discription={el.overview} />)}
+        {data.map((el,index) => <Banner key={index} img={el.img} title={el.title} genre={el.genre} description={el.overview} />)}
       </Carousel>
-      { row_titles.map((el,index)=><CardRows key={index} language={el.language} row_title={el.categorie}/>)}
+      { row_titles.map((el,index)=><CardRows key={index} language={el.language} row_title={el.category}/>)}
     </div>
   );
 }
