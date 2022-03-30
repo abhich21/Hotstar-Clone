@@ -50,18 +50,5 @@ router.get('/search',async(req, res)=>{
         })
     }
 })
-router.get('/home',async (req, res)=>{
-    try {
-        return res
-        .send('HELLO !')
-    } catch (error) {
-        return res
-        .status(500)
-        .send({
-            message : error.message,
-            location : "movie.controller"
-        })
-    }
-})
 module.exports = router
 
