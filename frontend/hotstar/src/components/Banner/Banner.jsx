@@ -1,24 +1,23 @@
 
 import "./Banner.css";
 
-function Banner() {
+function Banner({ title, year , genre, discription,img}) {
   return (
     <div className="banner-container">
       <div className="banner-left">
         <div className="banner-details">
-          <h1>Title</h1>
+          <h1>{title}</h1>
           <div>
-            <span>year . </span> <span> genre</span>
+            <span> {genre}</span>
           </div>
           <p className="banner-descr">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
-            reprehenderit, eligendi saepe ipsum non nisi cum eaque aliquam
-            similique odio, maiores recusandae aperiam nesciunt corrupti ab amet
-            cupiditate officia distinctio.
+            {discription}
           </p>
         </div>
       </div>
-      <div className="banner-right">
+      <div className="banner-right" style={{
+        backgroundImage: `url(${img})`
+      }}>
         <div></div>
       </div>
     </div>
