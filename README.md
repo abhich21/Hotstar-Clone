@@ -1,15 +1,18 @@
 # Hotstar-Clone
 
 Backend : 
+
 Base-api : https://hotstar-v.herokuapp.com
 
 routes : 
-1.   /movies?language=<language>
-2.   /tv?language=<<language>>
-3.   /search?q=<<query>> 
-
+<ul>
+    <li>/movies?language=<language></li>
+    <li>/tv?language=<<language>></li>
+    <li>/search?q=<<query>> </li>
+</ul>
 i.e.
-To seach a movie use url : 
-https://hotstar-v.herokuapp.com/search?q=<<query>> 
+To seach a movie use url :
 
-qurey : "RRR", "PUSHPA" 
+https://hotstar-v.herokuapp.com/search?q=[query]
+
+query : RRR | PUSHPA | 83 
