@@ -8,12 +8,13 @@
     background-position: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
+    
 }
 .card-gradient{
     width: 200px;
     height: 300px;
-    margin: auto;
-    margin-top: 0;
+    margin: 0;
+    
     background-image: linear-gradient(to top,
     rgb(24, 38, 66 ,1),
     rgb(24, 38, 66 ,1),
@@ -22,11 +23,7 @@
 }
 .card-content{
     width: 100%;
-    height: 100%;
-
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 50%;
+    height: 100%;;
     
 }
 .row-card:hover{   
