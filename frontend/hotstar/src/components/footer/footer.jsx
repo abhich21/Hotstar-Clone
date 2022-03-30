@@ -6,9 +6,7 @@ function Footer() {
       <div className="mid">
     <div className="foot">
     <div className="foot-left">
-        {/* <div>
-           <Link to="/"><img className="disney-img" src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="" /></Link> 
-        </div> */}
+        
         <div><Link to="/about">About  Disney + Hotstar</Link></div>
         <div><Link to="/terms">Terms of Use</Link></div>
         <div><Link to="/policy">Privacy Policy</Link></div>
