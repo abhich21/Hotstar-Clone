@@ -26,7 +26,7 @@ export const Card = ({id,title, discription,imageUrl}) => {
             <div className="card-gradient">
                 <div className="card-content">
                     <h3>{data.title}</h3>
-                    <p>{data.overview} </p>
+                    <p>{data.tagline} </p>
                 </div>
             </div>
         </div>

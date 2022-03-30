@@ -1,8 +1,10 @@
 
 import "./Banner.css";
+import{ Link } from "react-router-dom"
 
 function Banner({ title, year , genre, description,img}) {
   return (
+    <Link to="/movie/id">
     <div className="banner-container">
       <div className="banner-left">
         <div className="banner-details">
@@ -21,6 +23,7 @@ function Banner({ title, year , genre, description,img}) {
         <div></div>
       </div>
     </div>
+    </Link>
   );
 }
 
