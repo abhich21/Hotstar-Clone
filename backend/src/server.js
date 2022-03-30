@@ -4,7 +4,8 @@ const app = express()
 // await mongodbConnect()
 
 
-
+const cors = require('cors')
+app.use(cors())
 const movieController = require('./controllers/movie.controller')
 const port = process.env.PORT || 7000
 app.use('/', movieController)
