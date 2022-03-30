@@ -20,8 +20,8 @@ function CardRows() {
             >
               <div className="card-gradient">
                 <div className="card-content">
-                  Title <br />
-                  Lorem ipsum dolor siuptatres, incidunt totam id delectus doloribus blanditiis veniam maxime officiis minus a aliquam!
+                  <h3>title</h3> 
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio incidunt voluptas ipsam delectus sequi temporibus.</p>
                   
                 </div>
               </div>

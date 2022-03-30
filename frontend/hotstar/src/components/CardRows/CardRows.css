@@ -23,7 +23,11 @@
 }
 .card-content{
     width: 100%;
-    height: 100%;;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 12px;
     
 }
 .row-card:hover{   
