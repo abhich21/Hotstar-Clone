@@ -1,7 +1,6 @@
 {
-  "name": "test",
+  "name": "hotstar-clone",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js"
@@ -13,5 +12,6 @@
     "axios": "^0.26.1",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
-  }
+  },
+  "description": ""
 }
