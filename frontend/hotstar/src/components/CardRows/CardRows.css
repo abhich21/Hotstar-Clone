@@ -1,0 +1,23 @@
+
+.card-container{
+    display: flex;
+    height: 224px;
+    /* margin-top: 50px; */
+    gap: 10px;
+    overflow: scroll;
+    align-items: center;    
+}
+.row-title{
+ margin-top: 37px;
+ margin-left: 35px;
+}
+
+.row-title h2{
+    margin: 0px 0px;
+}
+.card-container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
