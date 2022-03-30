@@ -2,6 +2,7 @@ import "./Card.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 export const Card = ({id,title, discription,imageUrl}) => {
@@ -15,7 +16,7 @@ export const Card = ({id,title, discription,imageUrl}) => {
     }
     
     useEffect(() => { getData() }, [])
-    return <div
+    return <Link to={`/movie/${id}`}><div
        style={{
             backgroundImage: `url(${baseImgUrl+data.poster_path})`,
         }}
@@ -30,6 +31,7 @@ export const Card = ({id,title, discription,imageUrl}) => {
             </div>
         </div>
     </div>
+    </Link>
 }
 
 

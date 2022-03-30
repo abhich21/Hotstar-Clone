@@ -6,7 +6,7 @@ import { Card } from "../Card/Card";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom"
+
 
 
 function CardRows({ row_title, language }) { 
@@ -21,7 +21,7 @@ function CardRows({ row_title, language }) {
     <div className="row-title">
       <h3>{row_title}</h3>
       <div className="card-container">
-        {data.map(el =><Link to={`/movie/${el.id}`}> <Card
+        {data.map(el => <Card
           key={el.id}
           id={el.id}
           title={el.title}
@@ -29,7 +29,7 @@ function CardRows({ row_title, language }) {
           discription={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Optio incidunt voluptas ipsam delectus sequi temporibus.`}
         />
-        </Link>)}
+        )}
       </div>
     </div>
   );
