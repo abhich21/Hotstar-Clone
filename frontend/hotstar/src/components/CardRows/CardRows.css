@@ -1,25 +1,51 @@
-.card>img{
+.row-card{  
+    border-radius: 5px;
+     width:200px;
+     height: 300px;
+    transition-duration: 0.4s;
+    transition-delay: 0.4s;
+    background-size:cover ;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.card-gradient{
+    width: 200px;
     height: 300px;
-    transition-duration: 0.5s;
-    
-}.card{
-    height: 340px;
-    margin-top: 20px;
+    margin: auto;
+    margin-top: 0;
+    background-image: linear-gradient(to top,
+    rgb(24, 38, 66 ,1),
+    rgb(24, 38, 66 ,1),
+    rgba(0, 0, 0,0),
+    rgba(0, 0, 0,0));
 }
-.card>img:hover{
-    transform: scale(1.33);
+.card-content{
+    width: 100%;
+    height: 100%;
+
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 50%;
     
 }
-.cardContainer{
+.row-card:hover{   
+    transform: scale(1.15); 
+      
+}
+
+.card-container{
     display: flex;
+    height: 350px;
     gap: 10px;
-    overflow-x: scroll;
-    
+    overflow: scroll;
+  
+    align-items: center;    
 }
 .row-title{
  margin-left: 35px;
 }
-.cardContainer::-webkit-scrollbar {
+.card-container::-webkit-scrollbar {
     display: none;
   }
 

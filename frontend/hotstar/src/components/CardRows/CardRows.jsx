@@ -1,20 +1,30 @@
 import "./CardRows.css";
 
 import React from "react";
+import { width } from "@mui/system";
 
 function CardRows() {
-  const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div className="row-title">
-      <h2>Row Title</h2>
-      <div className="cardContainer">
+      <h3>Row Title</h3>
+      <div className="card-container">
         {data.map((el) => {
           return (
-            <div className="card">
-              <img
-                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3732/1123732-v-2cc8548c7dae"
-                alt=""
-              />
+            <div
+              key={Date.now()}
+              style={{
+                backgroundImage: `url("https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/613/1160613-v-b525150954e1")`,
+              }}
+              className="row-card"
+            >
+              <div className="card-gradient">
+                <div className="card-content">
+                  Title <br />
+                  Lorem ipsum dolor siuptatres, incidunt totam id delectus doloribus blanditiis veniam maxime officiis minus a aliquam!
+                  
+                </div>
+              </div>
             </div>
           );
         })}
