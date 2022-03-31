@@ -1,0 +1,49 @@
+
+.hotstarSearch{
+    position: relative;
+     width: 240px;
+     height: 32px;
+     border: none;
+     border-bottom: 1px solid white;
+     color: #a0a3a8;
+     font-size: 16px;
+     outline: 0;
+     padding: 0 28px 0 0px;
+     background: none;
+ }
+
+ #searchBox{
+     position: absolute;
+     right: 100px;
+     z-index: 2;
+     background-color: #131a27;
+     overflow:hidden;
+     margin: 5px 10px;
+     width: 500px;
+     min-height: 0px;
+     max-height: 450px;
+     padding:0px 7px;
+     background-color: none;
+     overflow: auto;
+ }
+ #searchBox::-webkit-scrollbar{
+     display: none;
+ }
+ #searchBox ::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: red;
+ }
+
+ .searchinput{
+     display: flex;
+ }
+
+ #clearBtn{
+     cursor: pointer;
+ }
+
+ input:focus{
+     border-bottom: 1px solid blue;
+     right: 100px;
+ }
+ 

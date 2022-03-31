@@ -1,5 +1,6 @@
 import "./Navbar.css"
 import {Link} from "react-router-dom"
+import {Search} from "../Search/Search";
 
 function Navbar() {
   return (
@@ -14,6 +15,7 @@ function Navbar() {
         <div><Link to="/disney+">DISNEY+</Link></div>
     </div>
     <div className="nav-right">
+        <Search/>
         <div>LOGIN</div>
     </div>
     </div>
