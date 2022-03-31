@@ -32,9 +32,9 @@ app.get('/auth/google',
   	[ 'email', 'profile' ] }
 ));
  
-app.get( '/auth/google/callback',
+app.get('/auth/google/callback',
     passport.authenticate( 'google', {
-        // successRedirect: '/auth/google/success',
+        // successRedirect: 'http://localhost:3000',
         failureRedirect: '/auth/google/failure'
 }),(req,res)=>{
     return res.status(203).send({name:req.user.name,email:req.user.email})
