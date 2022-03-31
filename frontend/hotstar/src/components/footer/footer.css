@@ -1,9 +1,5 @@
-*{
 
-    background-color: #131a27;;
-    /* margin-top: 10px; */
-}
-p{
+.mid p{
     margin-top: 0px;
     font-size: smaller;
     color: white;
@@ -47,13 +43,13 @@ p{
 .foot-right>div{
     cursor: pointer;
 }
-a{
+.mid a{
     text-decoration: none;
     color: inherit;
 }
 
 
-span{
+.mid span{
     margin-left: 10px;
 }
 .foot-right>span>img{

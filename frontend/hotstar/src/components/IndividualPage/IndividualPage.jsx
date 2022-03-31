@@ -13,8 +13,6 @@ function IndividualPage() {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
     const a = await axios.get(url)
     setData(a.data)
-    console.log(a.data.original_language)
-
   }
 
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'

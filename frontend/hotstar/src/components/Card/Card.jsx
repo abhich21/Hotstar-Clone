@@ -23,7 +23,7 @@ export const Card = ({id,title, discription,imageUrl}) => {
         className="row-card"
     >
         <div className="wrap">
-            <div className="card-gradient">
+            <div className="card-gradient"> 
                 <div className="card-content">
                     <h3>{data.title}</h3>
                     <p>{data.tagline} </p>
