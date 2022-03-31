@@ -8,7 +8,7 @@
     border-radius: 10px; 
 }
 .row-title{
- margin-top: 37px;
+ margin-top: 30px;
  margin-left: 35px;
 }
 
@@ -29,7 +29,29 @@
         border-radius: 4px 4px 4px 4px; 
     }
     .row-title{
-     margin-top: 17px;
+     margin-top: 1px;
+     margin-left: 15px;
+    }
+    
+    .row-title h2{
+        margin: 0px 0px;
+    }
+    .card-container::-webkit-scrollbar {
+        display: none;
+      }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .card-container{
+        display: flex;
+        height: 170px;
+        gap: 10px;
+        overflow: scroll;
+        align-items: center;   
+        border-radius: 4px 4px 4px 4px; 
+    }
+    .row-title{
+     margin-top: 1px;
      margin-left: 15px;
     }
     
