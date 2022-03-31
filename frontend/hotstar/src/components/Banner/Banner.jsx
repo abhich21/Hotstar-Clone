@@ -12,7 +12,7 @@ function Banner({ title, year, genre, description, img }) {
         <div className="banner-left">
           <div className="banner-details">
             <h1>{title}</h1>
-            <div>
+            <div id="genre">
               <span> {genre}</span>
             </div>
             <p className="banner-descr">{description}</p>
