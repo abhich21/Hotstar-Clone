@@ -100,7 +100,3 @@ So, this was all from our side and we are delighted to work on similar kind of p
 <!-- ### 
 - Github : https://github.com/
  -->
-
-
-### Ajit Kumar Pandey
-- Github : https://github.com/Ajit24
