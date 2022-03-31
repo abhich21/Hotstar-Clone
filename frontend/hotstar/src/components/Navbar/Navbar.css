@@ -32,4 +32,43 @@ a{
     text-decoration: none;
     color: inherit;
 }
+.dropdown{
+    position: relative;
+}
+.dropdown ul{
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #0b1529;
+  opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    transform: translateY(-10px);
+
+    
+}
+.dropdown li{
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.dropdown li:hover{
+    background-color:#0e1627;
+}
+
+.dropdown:hover  ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+
 
