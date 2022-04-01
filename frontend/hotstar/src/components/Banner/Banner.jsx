@@ -17,6 +17,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
       const a = await fetch('http://localhost:7000/watchlist',{
         method : "POST",
         body : JSON.stringify({
+          id:id,
           imageUrl : img,
           title :title,
           overview : description
@@ -33,7 +34,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
 
   }
   return (
-    <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm}`}>
+    <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm || id}`}>
       <div className="banner-container">
         <div className="banner-left">
           <div className="banner-details">
