@@ -1,66 +1,34 @@
 const express = require('express')
-const app = express()
+const cors = require('cors')
+
+
 const mongodbConnect = require('./config/db')
-const {register,logIn}=require("./controllers/user.auth");
-const passport=require("./config/google.oath");
-
-const port = 2345 || PORT
-
+const movieController = require('./controllers/movie.controller')
+const { register, login } = require('./controllers/account.controller')
+const wishlistController = require('./controllers/wishlist.controller')
+const app = express()
 app.use(express.json())
-app.get('/',async (req,res)=>{
-    try {
-        return res.send('HI ANONYMOUS!')
-    } catch (error) {
-        return res
-        .status(500)
-        .send({
-            message : error.message,
-            location : "server.js"
-        })
-    }
-});
-
-// User Auth and Google AuthController
-
-app.post("/register",register);
-app.post("/login",logIn);
-
-// GOOGLE OATH 2.0
-
-app.get('/auth/google',
-  passport.authenticate('google', { scope:
-  	[ 'email', 'profile' ] }
-));
- 
-app.get('/auth/google/callback',
-    passport.authenticate( 'google', {
-        // successRedirect: 'http://localhost:3000',
-        failureRedirect: '/auth/google/failure'
-}),(req,res)=>{
-    return res.status(203).send({name:req.user.name,email:req.user.email})
-}
-);
-
-passport.serializeUser(function (user, done) {
-    done(null, user);
-  });
-  
-  passport.deserializeUser(function (user, done) {
-    done(null, user);
-  });
+app.use(cors())
 
 
 
-module.exports = ()=>{
-    try {
-        app.listen(port, async ()=>{
+app.use('/', movieController)
+app.use('/resister',register)
+app.use('/login',login)
+app.use('wishlist',wishlistController)
+
+
+const port = process.env.PORT || 7000
+module.exports = () => {
+    app.listen(port, async () => {
+        try {
             await mongodbConnect()
             console.log(`Server is running on the port ${port}`)
-        })
-    } catch (error) {
-        console.log({
-            message : error.message,
-            location : "server.js"
-        })
-    }
+        } catch (error) {
+            console.log({
+                message: error.message,
+                location: "server.js"
+            })
+        }
+    })
 }

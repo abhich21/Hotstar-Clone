@@ -1,6 +1,6 @@
 
 .hotstarSearch{
-    position: relative;
+    /* position: relative; */
      width: 240px;
      height: 32px;
      border: none;
@@ -14,17 +14,17 @@
 
  #searchBox{
      position: absolute;
-     right: 100px;
+     right: 150px;
      z-index: 2;
      background-color: #131a27;
      overflow:hidden;
      margin: 5px 10px;
-     width: 500px;
+     width: 300px;
      min-height: 0px;
      max-height: 450px;
      padding:0px 7px;
      background-color: none;
-     overflow: auto;
+     overflow-y: auto;
  }
  #searchBox::-webkit-scrollbar{
      display: none;
@@ -44,6 +44,6 @@
 
  input:focus{
      border-bottom: 1px solid blue;
-     right: 100px;
+     width:300px;
  }
  
