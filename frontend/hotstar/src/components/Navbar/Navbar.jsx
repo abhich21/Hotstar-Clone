@@ -50,7 +50,7 @@ function Navbar() {
             <li><Link to={"#"}>Kabaddi</Link></li>
           </ul>
         </div>
-        <div>
+        <div  classaName="small">
           <Link to="/disney+">DISNEY+</Link>
         </div>
       </div>
