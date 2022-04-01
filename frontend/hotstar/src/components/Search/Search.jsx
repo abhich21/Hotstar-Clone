@@ -53,7 +53,7 @@ export const Search = () => {
       {data.length!=0 && 
       <div id="searchBox">
         {data.map((el) => (
-            <Link to={`/movies/${el.id}`} onClick={clearBtn}>
+            <Link to={`/movie/${el.id}`} onClick={clearBtn}>
                <Card path={el.backdrop_path} title={el.original_title} />
             </Link>
         ))}
