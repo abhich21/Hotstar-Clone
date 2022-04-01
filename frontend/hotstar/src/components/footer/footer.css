@@ -1,4 +1,7 @@
-
+.mid{
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
 .mid p{
     margin-top: 0px;
     font-size: smaller;
@@ -39,6 +42,10 @@
 .mid a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+}
+a:hover{
+    color: rgb(45, 45, 235);
 }
 .mid span{
     margin-left: 5px;
@@ -46,15 +53,15 @@
 .foot-right>span>img{
     
     margin-top: 10px;
-    height:50px;
+    height:40px;
     width:150px;
     border-radius: 4px;
     cursor:pointer
 }
 .foot-mid>span>img{
-    color: white;
+    background-color: gray;
     margin-top: 10px;
-    height:50px;
-    width:50px;
+    height:40px;
+    width:40px;
     cursor:pointer
 }
