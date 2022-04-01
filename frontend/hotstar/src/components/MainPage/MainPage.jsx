@@ -4,8 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CardRows from "../CardRows/CardRows";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function MainPage() {
+  
+  const {category} = useParams()
+  console.log(category)
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
@@ -14,7 +18,7 @@ function MainPage() {
   const getData = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/trending/all/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
+        `https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movies"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
       )
       .then((res) => {
         console.log(res.data.results);

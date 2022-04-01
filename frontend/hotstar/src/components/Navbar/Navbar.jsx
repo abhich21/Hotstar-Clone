@@ -77,6 +77,7 @@ function Navbar() {
         </div>
       </div>
       <div className="nav-right">
+          <Search/>
           <div onClick={()=> setButtonPopup(true)}>LOGIN</div>
       </div>
       </div>
