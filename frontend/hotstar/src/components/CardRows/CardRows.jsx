@@ -27,7 +27,7 @@ function CardRows({ row_title, language }) {
           id={el.id}
           title={el.title}
           imageUrl={el.poster_path}
-          discription={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          description={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Optio incidunt voluptas ipsam delectus sequi temporibus.`}
         />
         )}

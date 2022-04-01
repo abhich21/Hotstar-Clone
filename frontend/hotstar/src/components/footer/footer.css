@@ -45,12 +45,12 @@
     cursor: pointer;
 }
 a:hover{
-    color: rgb(45, 45, 235);
+    color: #1f80e0;
 }
 .mid span{
     margin-left: 5px;
 }
-.foot-right>span>img{
+.foot-right>span>a>img{
     
     margin-top: 10px;
     height:40px;
@@ -58,10 +58,13 @@ a:hover{
     border-radius: 4px;
     cursor:pointer
 }
-.foot-mid>span>img{
+.foot-mid>span>a>img{
     background-color: gray;
     margin-top: 10px;
     height:40px;
     width:40px;
     cursor:pointer
+}
+.foot-mid>span>a>img:hover,.foot-right>span>a>img{
+    background-color: #1f80e0;
 }
