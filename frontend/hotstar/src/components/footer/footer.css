@@ -44,7 +44,7 @@
     color: inherit;
     cursor: pointer;
 }
-a:hover{
+.mid a:hover{
     color: #1f80e0;
 }
 .mid span{

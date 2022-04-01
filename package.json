@@ -1,9 +1,15 @@
 {
   "name": "hotstar-clone",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhich21/Hotstar-Clone.git"
   },
   "keywords": [],
   "author": "",
@@ -13,13 +19,13 @@
   },
   "homepage": "https://github.com/abhich21/Hotstar-Clone#readme",
   "dependencies": {
-    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.9"
-  },
-  "description": ""
+    "mongoose": "^6.2.9",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "uuid": "^8.3.2"
+  }
 }

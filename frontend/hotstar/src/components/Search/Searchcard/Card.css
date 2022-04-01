@@ -1,0 +1,14 @@
+.smalldiv{
+    background-color: #192133;
+    display: flex;
+    font-size: 7px ;
+    margin: 10px 5px;
+}
+
+.smalldiv>h1{
+    margin: 12px 10px;
+}
+
+.smalldiv:hover{
+    border: 2px solid wheat;
+}

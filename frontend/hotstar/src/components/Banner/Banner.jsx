@@ -1,13 +1,39 @@
 import "./Banner.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import PlaylistAddRoundedIcon from "@mui/icons-material/PlaylistAddRounded";
 import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
+import axios from "axios";
 
-function Banner({ title, year, genre, description, img }) {
+function Banner({ title, year, genre, description, img, idm, mediaType }) {
   const { id, category } = useParams();
+
+
+  async function addWatchList(){
+    const userToken = localStorage.getItem('token')
+    if(userToken)
+    {
+      const token = JSON.parse(userToken)
+      const a = await fetch('http://localhost:7000/watchlist',{
+        method : "POST",
+        body : JSON.stringify({
+          imageUrl : img,
+          title :title,
+          overview : description
+        }),
+        headers : {
+          "content-type" : "application/json",
+          Authentication : `Bearer ${token}`
+        }
+      })
+      const b = await a.json()
+    }
+    else
+      alert('Please SignIn to add this movie in your watchlist')
+
+  }
   return (
-    <Link to="/movie/id">
+    <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm}`}>
       <div className="banner-container">
         <div className="banner-left">
           <div className="banner-details">
@@ -19,7 +45,8 @@ function Banner({ title, year, genre, description, img }) {
           </div>
           {id ? (
             <div className="btns">
-              <div>
+              <Link to={`/${category}/${id}/video`}>
+              <div >
                 <PlayArrowRoundedIcon
                   fontSize="large"
                   className="play-icon"
@@ -27,9 +54,10 @@ function Banner({ title, year, genre, description, img }) {
 
                 <h2>Watch Movie</h2>
               </div>
+              </Link>
               <div>
                 <div>
-                  <PlaylistAddRoundedIcon fontSize="large"></PlaylistAddRoundedIcon>
+                  <PlaylistAddRoundedIcon  onClick={addWatchList} fontSize="large"></PlaylistAddRoundedIcon>
                   watchlist
                 </div>
                 <div>

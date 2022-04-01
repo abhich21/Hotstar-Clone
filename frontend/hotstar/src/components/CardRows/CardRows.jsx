@@ -13,7 +13,7 @@ function CardRows({ row_title, language }) {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const url = `https://hotstar-v.herokuapp.com/movies?language=${language ||""}`
+    const url = `https://hotstar-v.herokuapp.com/movies?language=${language || ""}`
     const a = await axios.get(url)
     setData(a.data.results)
   }
@@ -27,7 +27,7 @@ function CardRows({ row_title, language }) {
           id={el.id}
           title={el.title}
           imageUrl={el.poster_path}
-          discription={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          description={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Optio incidunt voluptas ipsam delectus sequi temporibus.`}
         />
         )}
