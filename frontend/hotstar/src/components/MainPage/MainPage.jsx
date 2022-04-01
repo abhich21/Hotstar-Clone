@@ -82,7 +82,7 @@ function MainPage() {
             title={el.title || el.name}
             genre={el.genre}
             description={el.overview}
-
+            mediaType = {el.media_type}
 
            
           />
