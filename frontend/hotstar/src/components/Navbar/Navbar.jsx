@@ -8,7 +8,7 @@ import { Search } from "../Search/Search";
 import axios from 'axios'
 
 function Navbar() {
-  const [ auth, setAuth] = useState(localStorage.getItem('user')? true : false)
+  const [ auth, setAuth] = useState(localStorage.getItem('token')? true : false)
   const [buttonPopup, setButtonPopup] = useState(false);
   const [otpPopup, setOtpPopup] = useState(false);
   const navigate = useNavigate()
@@ -48,7 +48,7 @@ function Navbar() {
     const a = await axios.post(`http://localhost:7000/signin`, user)
     if (a.data.status) {
       const { token } = a.data
-      localStorage.setItem('user', JSON.stringify(token))
+      localStorage.setItem('token', JSON.stringify(token))
       setAuth(true)
       return
     }
