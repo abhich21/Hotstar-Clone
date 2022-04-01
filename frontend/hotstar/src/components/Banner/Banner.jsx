@@ -7,7 +7,7 @@ import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
 function Banner({ title, year, genre, description, img }) {
   const { id, category } = useParams();
   return (
-    <Link to="/movie/id">
+    <Link to={`/movie/${id}`}>
       <div className="banner-container">
         <div className="banner-left">
           <div className="banner-details">

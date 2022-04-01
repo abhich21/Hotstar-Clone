@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 
-export const Card = ({id,title, discription,imageUrl}) => {
+export const Card = ({id,title, description,imageUrl}) => {
     let baseImgUrl = 'https://image.tmdb.org/t/p/original'// + imageUrl
 
     const [data, setData] = useState({})
@@ -26,7 +26,7 @@ export const Card = ({id,title, discription,imageUrl}) => {
             <div className="card-gradient"> 
                 <div className="card-content">
                     <h3>{data.title}</h3>
-                    <p>{data.tagline} </p>
+                    <p>{data.overview} </p>
                 </div>
             </div>
         </div>
