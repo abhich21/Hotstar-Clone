@@ -6,13 +6,9 @@
     margin-left: 50px;
 }
 .foot{
-    /* height: 75px; */
     width: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
-    background-color: #131a27;
-    /* justify-content: space-between; */
 }
 .foot-left{
     display: flex;
@@ -22,14 +18,11 @@
     color: white;
 }
 .foot-mid{
-    margin-top: 50px;
     font-weight: bold;
     color: gray;
     margin-left:25%;
 }
 .foot-right{
-    /* display: flex; */
-    margin-top: 50px;
     font-weight: bold;
     color: gray;
     margin-left:10%;
@@ -47,10 +40,8 @@
     text-decoration: none;
     color: inherit;
 }
-
-
 .mid span{
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .foot-right>span>img{
     
@@ -62,11 +53,8 @@
 }
 .foot-mid>span>img{
     color: white;
-    /* background-color: white; */
     margin-top: 10px;
     height:50px;
     width:50px;
-    /* border-radius: 4px; */
-    border:3px solid #131a27;
     cursor:pointer
 }
