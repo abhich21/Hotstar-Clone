@@ -10,7 +10,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
 
 
   async function addWatchList(){
-    const userToken = localStorage.getItem('user')
+    const userToken = localStorage.getItem('token')
     if(userToken)
     {
       const token = JSON.parse(userToken)
