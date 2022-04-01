@@ -2,6 +2,7 @@ import YouTube from 'react-youtube';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import "./Videopage.css"
 
 function VideoPage() {
     const {id, category}= useParams()
@@ -30,7 +31,7 @@ function VideoPage() {
       };
   return (
     <div>
-        <YouTube videoId={urlId} opts={opts}></YouTube>
+        {urlId?<YouTube videoId={urlId} opts={opts}></YouTube>:<h1 className='error'>VIDEO NOT FOUND</h1>}
     </div>
   )
 }
