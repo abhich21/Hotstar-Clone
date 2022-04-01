@@ -59,8 +59,16 @@ function Navbar() {
   const logOutUser = ()=>{
     localStorage.removeItem('token')
     setAuth(false)
+    navigate('/')
   }
-
+  const checkLoggedUser = ()=>{
+    if(localStorage.getItem('token'))
+      {
+        navigate('/watchlist')
+      }
+    else
+      alert('Please Login')
+  }
 
   return (
     <>
@@ -119,7 +127,7 @@ function Navbar() {
           { auth ? <div className="dropdown">
             <Link className="link" to="/sports">Profile</Link>
             <ul>
-              <li><Link to={"#"}>WatchList</Link></li>
+              <li onClick={checkLoggedUser}>WatchList</li>
               <li><Link to={"#"}>My Account</Link></li>
               <li onClick={logOutUser}>Log Out</li>
             </ul>
