@@ -7,6 +7,7 @@ import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
 function Banner({ title, year, genre, description, img, idm, mediaType }) {
   const { id, category } = useParams();
   console.log(id)
+
   return (
     <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm}`}>
       <div className="banner-container">
@@ -20,7 +21,8 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
           </div>
           {id ? (
             <div className="btns">
-              <div>
+              <Link to={`/${category}/${id}/video`}>
+              <div >
                 <PlayArrowRoundedIcon
                   fontSize="large"
                   className="play-icon"
@@ -28,6 +30,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
 
                 <h2>Watch Movie</h2>
               </div>
+              </Link>
               <div>
                 <div>
                   <PlaylistAddRoundedIcon fontSize="large"></PlaylistAddRoundedIcon>
