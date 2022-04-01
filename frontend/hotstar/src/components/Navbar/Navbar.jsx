@@ -125,7 +125,7 @@ function Navbar() {
         <div className="nav-right">
           <Search />
           { auth ? <div className="dropdown">
-            <Link className="link" to="/sports">Profile</Link>
+            <div className="link" to="/sports">Profile</div>
             <ul>
               <li onClick={checkLoggedUser}>WatchList</li>
               <li><Link to={"#"}>My Account</Link></li>

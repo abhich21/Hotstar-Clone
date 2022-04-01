@@ -26,6 +26,8 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
           "content-type" : "application/json",
           Authentication : `Bearer ${token}`
         }
+      }).then(()=>{
+        alert("added to wishlist")
       })
       const b = await a.json()
     }
@@ -57,7 +59,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
               </div>
               </Link>
               <div>
-                <div>
+                <div className="playlist-btn">
                   <PlaylistAddRoundedIcon  onClick={addWatchList} fontSize="large"></PlaylistAddRoundedIcon>
                   watchlist
                 </div>
