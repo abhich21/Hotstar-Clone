@@ -27,7 +27,6 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
         }
       })
       const b = await a.json()
-      console.log(b)
     }
     else
       alert('Please SignIn to add this movie in your watchlist')
@@ -46,7 +45,8 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
           </div>
           {id ? (
             <div className="btns">
-              <div>
+              <Link to={`/${category}/${id}/video`}>
+              <div >
                 <PlayArrowRoundedIcon
                   fontSize="large"
                   className="play-icon"
@@ -54,6 +54,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
 
                 <h2>Watch Movie</h2>
               </div>
+              </Link>
               <div>
                 <div>
                   <PlaylistAddRoundedIcon  onClick={addWatchList} fontSize="large"></PlaylistAddRoundedIcon>

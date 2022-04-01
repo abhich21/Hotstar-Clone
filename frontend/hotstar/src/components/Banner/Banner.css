@@ -42,10 +42,13 @@
   font-weight:600;
 }
 
-.btns>div{
+.btns div{
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.btns>a>div:hover{
+  color: white;
 }
 .btns{
   display: flex;
