@@ -76,12 +76,15 @@ function MainPage() {
       >
         {data.map((el, index) => (
           <Banner
-          id ={el.id}
+            idm ={el.id}
             key={index}
             img={`${baseImgUrl}${el.backdrop_path}`}
-            title={el.title}
+            title={el.title || el.name}
             genre={el.genre}
             description={el.overview}
+
+
+           
           />
         ))}
       </Carousel>

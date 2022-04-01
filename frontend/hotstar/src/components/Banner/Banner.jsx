@@ -4,10 +4,11 @@ import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import PlaylistAddRoundedIcon from "@mui/icons-material/PlaylistAddRounded";
 import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
 
-function Banner({ title, year, genre, description, img }) {
-  const { id, category } = useParams();
+function Banner({ title, year, genre, description, img, idm }) {
+  const { id } = useParams();
+  console.log(id)
   return (
-    <Link to={`/movie/${id}`}>
+    <Link to={`/movie/${idm}`}>
       <div className="banner-container">
         <div className="banner-left">
           <div className="banner-details">
