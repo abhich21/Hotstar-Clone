@@ -1,0 +1,180 @@
+.row-card{  
+    border-radius: 5px;
+    width: 200px;
+    height: 265px;
+    transition-duration: 0.4s;
+    transition-delay: 0.3s;
+    background-size:cover ;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    
+}
+
+.wrap{
+    width: 200px;
+    height: 265px;
+    margin: 0;  
+    
+}
+
+.card-gradient{
+    width: 200px;
+    height: 265px;
+    margin: 0;
+    
+    background-image: linear-gradient(to top,
+    rgb(24, 38, 66 ,1),
+    rgb(24, 38, 66 ,1),
+    rgba(0, 0, 0,0),
+    rgba(0, 0, 0,0));
+    transition-delay: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+
+    
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 12px;
+    
+}
+.row-card:hover .card-gradient{   
+  display: block;
+  visibility: visible;
+  opacity: 1;
+      
+}
+.row-card:hover{
+    transform: scale(1.15);
+}
+.card-content>p,h3{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width:667px) {
+    .row-card{  
+        border-radius: 5px;
+        width: 110px;
+        height: 210px;
+        transition-duration: 0.4s;
+        transition-delay: 0.3s;
+        background-size:cover ;
+        background-position: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+        
+    }
+    
+    .wrap{
+        width: 200px;
+        height: 265px;
+        margin: 0;  
+        
+    }
+    
+    .card-gradient{
+        width: 200px;
+        height: 265px;
+        margin: 0;
+        
+        background-image: linear-gradient(to top,
+        rgb(24, 38, 66 ,1),
+        rgb(24, 38, 66 ,1),
+        rgba(0, 0, 0,0),
+        rgba(0, 0, 0,0));
+        transition-delay: 0.4s;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    
+        
+    }
+    .card-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        font-size: 6px;
+        
+    }
+    .row-card:hover .card-gradient{   
+      display: block;
+      visibility: visible;
+      opacity: 1;
+          
+    }
+    .row-card:hover{
+        transform: scale(1.15);
+    }
+    .card-content>p,h3{
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .row-card{  
+        border-radius: 5px;
+        width: 100px;
+        height: 150px;
+        transition-duration: 0.4s;
+        transition-delay: 0.3s;
+        background-size:cover ;
+        background-position: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+        
+    }
+    
+    .wrap{
+        width: 200px;
+        height: 265px;
+        margin: 0;  
+        
+    }
+    
+    .card-gradient{
+        width: 200px;
+        height: 265px;
+        margin: 0;
+        
+        background-image: linear-gradient(to top,
+        rgb(24, 38, 66 ,1),
+        rgb(24, 38, 66 ,1),
+        rgba(0, 0, 0,0),
+        rgba(0, 0, 0,0));
+        transition-delay: 0.4s;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    
+        
+    }
+    .card-content{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        font-size: 6px;
+        
+    }
+    .row-card:hover .card-gradient{   
+      display: block;
+      visibility: visible;
+      opacity: 1;
+          
+    }
+    .row-card:hover{
+        transform: scale(1.15);
+    }
+    .card-content>p,h3{
+        margin-left: 10px;
+    }
+}
