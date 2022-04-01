@@ -34,6 +34,7 @@
   right: 10px;
   background-color: transparent;
   border: none;
+  color: white;
 }
 .close-btn:hover{
   cursor: pointer;
@@ -86,9 +87,32 @@ margin-left: 10%;
   margin-left: 10%;
 }
 
-.email{
+.epField{
   margin: auto;
 }
-.password{
+.password ,.email{
   margin: auto;
+  width: 280px;
+  border-radius: 5px;
+  margin-top: 17px;
+  margin-left: 62px;
+  padding: 8px 10px;
+  font-size: 15px;
+  background-color: rgb(10, 56, 102);
+}
+
+.loginBtn{
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+.loginBtn button {
+  margin: 0px 10px;
+  padding: 7px 10px ;
+  background-color: rgb(10, 56, 102);
+  color: white;
+}
+.loginBtn button:hover{
+  background-color: rgb(157, 161, 164);
+  color : black;
 }

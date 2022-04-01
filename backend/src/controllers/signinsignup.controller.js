@@ -8,40 +8,39 @@ const newToken = (user) => {
 
 const register = async (req, res) => {
     try {
+
         let user = await User.findOne({ email: req.body.email }).lean().exec()
         if (user)
             return res
-            .status(404)
-            .send({status : 0})
+            .send({status: 0})
         user = await User.create(req.body)
         const token = newToken(user)
 
         return res
-        .status(201)
-        .send({ token, status : 1})
+        .send({ token, status : 1 })
     } catch (error) {
-        res.status(500).send({error : error.message})
+        res.status(500).send({register : error.message})
     }
 }
 
 const login = async (req, res) => {
     try {
+
+        console.log({user :  req.body})
         let user = await User.findOne({ email: req.body.email })
         if (!user)
             return res
-                    .status(404)
-                    .send({ status : 0 })
+            .send({ status : 0 })
 
 
         const isRightFlag = user.checkPassword(req.body.password)
         if (isRightFlag == false)
             return res
-                    .status(404)
-                    .send({ status : 0 })
+            .send({ status : 0 })
 
 
         const token = newToken(user)
-        res.status(201).send({token, status : 1})
+        res.send({token ,status : 1})
     } catch (error) {
         res.status(500).send({register : error.message})
     }
