@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function MainPage(props) {
+function MainPage() {
   
   const {category} = useParams()
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
-  }, []);
+  }, [category]);
 
   const getData = () => {
     axios

@@ -5,8 +5,9 @@ import axios from "axios"
 import CardRows from "../CardRows/CardRows"
 
 function IndividualPage(props) {
-  
   const {id, category} = useParams()
+  useEffect(() => { getData() }, [id])
+  
   const [data, setData] = useState({})
   useEffect(() => { getData() }, [id])
   const getData = async () => {
