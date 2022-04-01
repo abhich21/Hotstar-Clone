@@ -5,6 +5,7 @@ import Test from "../Login/Test";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search } from "../Search/Search";
+import axios from 'axios'
 
 function Navbar() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -12,19 +13,44 @@ function Navbar() {
     const navigate = useNavigate();
 
     const handleKeyDown = (e) => {
-        console.log("key",e)
         if (e.key === "Enter") {
             if (e.target.value === "1234") {
-                //console.log("done");
               setOtpPopup(false);
               navigate("/");
             }
             else {
-                console.log("enter valid");
+                alert("enter valid");
             }
         }
     }
 
+
+  const dummyUser = {
+    email : "",
+    password : ""
+}
+  const [user, setUser] = useState(dummyUser)
+  function handleInput(e){
+      let { name, value} = e.target
+      setUser({...user,[name] : value})
+  }
+
+  const signUp = async ()=>{
+      const a = await axios.post(`http://localhost:7000/resister`, user)
+      if(a.data.status)
+          {
+            return alert(a.data)
+        }
+      else    
+          return alert('failed')
+  }
+  const signIn = async ()=>{
+      const a = await axios.post(`http://localhost:7000/login`, user)
+      if(a.data.status)
+          return alert(a.data)
+      else    
+          return alert('failed')
+  }
   return (
     <>
     <div className="nav">
@@ -83,20 +109,27 @@ function Navbar() {
       </div>
       </div>
             <Test trigger={buttonPopup} setTrigger={setButtonPopup}>
-                {/* <p style={{
+                <p style={{
                     fontSize: "18px",
                     wordSpacing:"1.4px"
                 }} className="text">Login to continue</p>
-                <br></br> */}
+                <br></br>
                 <div className="epField">
-                    <input className="email" name="email" type="text" placeholder="Enter Your Email"/><br />
-                    <input className="password" name="password" type="text" placeholder="Enter Your Password"/>
+                    <input onChange={handleInput} className="email" name="email" type="text" placeholder="Enter Your Email"/><br />
+                    <input onChange={handleInput} className="password" name="password" type="text" placeholder="Enter Your Password"/>
+                </div>
+                <div className="loginBtn">
+                  <button onClick={signUp}>SignUp</button>
+                  <button onClick={signIn}>SignIn</button>
                 </div>
                 <br></br>
+                <p style={{
+                    marginLeft:"45%"
+                }}>or</p>
                 <button className="btn">Have a Facebook/Email Account?</button>
                 <br></br>
                 <p style={{
-                    marginLeft:"50%"
+                    marginLeft:"45%"
                 }}>or</p>
                 <br></br>
                 <div className="input-div">

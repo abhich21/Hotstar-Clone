@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 export const Search = () => {
   const [text, setText] = useState("");
   const [data, setData] = useState([]);
-  console.log(text,data)
 
   const datafn = async () => {
 
