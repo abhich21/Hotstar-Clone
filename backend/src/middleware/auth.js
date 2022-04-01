@@ -12,8 +12,6 @@ const tokenVerify = (token)=>{
 }
 
 const authenticate = async (req,res,next)=>{
-    console.log({movies : req.body})
-    console.log({headers : req.headers})
     if(!req.headers.authentication)
         return res
         .status(400)
