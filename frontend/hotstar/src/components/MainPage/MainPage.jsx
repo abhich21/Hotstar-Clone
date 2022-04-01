@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function MainPage() {
+function MainPage(props) {
   
   const {category} = useParams()
   console.log(category)
@@ -68,7 +68,7 @@ function MainPage() {
   ];
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'
   return (
-    <div>
+    <div key={props.key}>
       <Carousel
         autoPlay
         interval={5000}

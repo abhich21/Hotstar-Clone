@@ -4,7 +4,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import CardRows from "../CardRows/CardRows"
 
-function IndividualPage() {
+function IndividualPage(props) {
   
   useEffect(() => { getData() }, [])
   const {id, category} = useParams()
@@ -22,7 +22,7 @@ function IndividualPage() {
    
   return (
     
-    <div><Banner img={`${baseImgUrl}${data.backdrop_path}`  } title={data.original_title || data.name} description={data.overview}></Banner>
+    <div key={props.pageId}><Banner img={`${baseImgUrl}${data.backdrop_path}`  } title={data.original_title || data.name} description={data.overview}></Banner>
       <CardRows language={data.original_language} row_title="More Like This"></CardRows>
      
     </div>
