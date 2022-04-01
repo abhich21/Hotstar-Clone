@@ -88,7 +88,7 @@ function Navbar() {
           </div>
 
           <div className="dropdown">
-            <Link className="link" to="/movies">MOVIES</Link>
+            <Link className="link" to="/movie">MOVIES</Link>
             <ul>
               <li><Link to={"#"}>Hindi</Link></li>
               <li><Link to={"#"}>Bengali</Link></li>

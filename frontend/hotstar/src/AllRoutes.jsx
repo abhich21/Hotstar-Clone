@@ -11,8 +11,8 @@ function AllRoutes() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<MainPage></MainPage>}></Route>
-        <Route path="/:category" element={<MainPage key={Date.now().toString}></MainPage>} ></Route>
-        <Route  path={`/:category/:id`}  element={<IndividualPage key={Date.now().toString} ></IndividualPage>} ></Route>
+        <Route path="/:category" element={<MainPage ></MainPage>} ></Route>
+        <Route  path={`/:category/:id`}  element={<IndividualPage  ></IndividualPage>} ></Route>
         <Route path="/:category/:id/video" element={<VideoPage></VideoPage>}></Route>
         
       </Routes>

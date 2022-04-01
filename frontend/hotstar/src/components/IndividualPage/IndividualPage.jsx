@@ -5,9 +5,9 @@ import axios from "axios"
 import CardRows from "../CardRows/CardRows"
 
 function IndividualPage(props) {
-  
-  useEffect(() => { getData() }, [])
   const {id, category} = useParams()
+  useEffect(() => { getData() }, [id])
+  
   const [data, setData] = useState({})
   const getData = async () => {
     const url = `https://api.themoviedb.org/3/${category}/${id}?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
