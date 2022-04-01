@@ -17,23 +17,25 @@
      right: 150px;
      z-index: 2;
      background-color: #131a27;
-     overflow:hidden;
      margin: 5px 10px;
      width: 300px;
      min-height: 0px;
      max-height: 450px;
      padding:0px 7px;
      background-color: none;
-     overflow-y: auto;
- }
- #searchBox::-webkit-scrollbar{
-     display: none;
- }
- #searchBox ::-webkit-scrollbar-thumb{
-    width: 5px;
-    background-color: red;
- }
+     overflow: scroll;
+    }
 
+    #searchBox::-webkit-scrollbar{
+        width: 8px;
+    }
+    #searchBox::-webkit-scrollbar-track{
+        width: 8px;
+    }
+    #searchBox::-webkit-scrollbar-thumb{
+        width: 8px;
+        background-color: #4e4f52;
+    }
  .searchinput{
      display: flex;
  }
@@ -44,6 +46,6 @@
 
  input:focus{
      border-bottom: 1px solid blue;
-     width:300px;
+     width:280px;
  }
  

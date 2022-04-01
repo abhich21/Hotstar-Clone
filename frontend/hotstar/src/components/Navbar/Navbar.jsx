@@ -4,6 +4,7 @@ import "../Login/test.css";
 import Test from "../Login/Test";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Search } from "../Search/Search";
 
 function Navbar() {
   const [buttonPopup, setButtonPopup] = useState(false);
