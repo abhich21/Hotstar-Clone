@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import "./test.css";
-import Test from "./Test";
+import "../Login/test.css";
+import Test from "../Login/Test";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -80,12 +80,16 @@ function Navbar() {
           <div onClick={()=> setButtonPopup(true)}>LOGIN</div>
       </div>
       </div>
-      <Test trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <p style={{
+            <Test trigger={buttonPopup} setTrigger={setButtonPopup}>
+                {/* <p style={{
                     fontSize: "18px",
                     wordSpacing:"1.4px"
                 }} className="text">Login to continue</p>
-                <br></br>
+                <br></br> */}
+                <div className="epField">
+                    <input className="email" name="email" type="text" placeholder="Enter Your Email"/><br />
+                    <input className="password" name="password" type="text" placeholder="Enter Your Password"/>
+                </div>
                 <br></br>
                 <button className="btn">Have a Facebook/Email Account?</button>
                 <br></br>
