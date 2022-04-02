@@ -38,7 +38,6 @@ const authenticate = async (req,res,next)=>{
 
     const user = result.user
     req.body.user = result.user
-    console.log({user})
     next()
 }
 

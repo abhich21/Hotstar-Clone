@@ -6,12 +6,12 @@ const User = require('../models/user.model')
 const { newToken } = require('../controllers/signinsignup.controller');
 const { authenticate } = require('../middleware/auth');
 const router = Router()
-
+const APP_CLINT_ID="470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"
 
 async function verify(token) {
     const ticket = await client.verifyIdToken({
         idToken: token,
-        audience: process.env.APP_CLINT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+        audience: APP_CLINT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
     })
     const payload = ticket.getPayload();
     const userid = payload['sub']

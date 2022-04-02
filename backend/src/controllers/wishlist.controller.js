@@ -41,7 +41,6 @@ router.post('/', authenticate ,async ( req, res)=>{
 })
 
 router.delete('/:id',async(req,res)=>{
-    console.log("checker",req.params.id);
     try {
         const item = await WishList.findByIdAndDelete(req.params.id);
     
