@@ -10,7 +10,7 @@ import { useState } from "react";
 
 function Banner({Status,did,setStatus,title, year, genre, description, img, idm, mediaType }) {
   const { id, category } = useParams()
-
+  const navigate = useNavigate()
   async function addWatchList(){
     const user = localStorage.getItem('user')
     if(user)
@@ -34,7 +34,9 @@ function Banner({Status,did,setStatus,title, year, genre, description, img, idm,
       const b = await a.json()
     }
     else
-      alert('Please SignIn to add this movie in your watchlist')
+      {
+        alert('Please SignIn to add this movie in your watchlist')
+      }
 
   }
 

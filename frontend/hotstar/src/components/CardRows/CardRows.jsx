@@ -18,7 +18,6 @@ function CardRows({ row_title, language }) {
     const url = id?`https://api.themoviedb.org/3/${category}/${id}/similar?api_key=3d63cba818eb8bc583a23f643a655a3d`:!language?`https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movies"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`:`https://hotstar-v.herokuapp.com/movies?language=${language}`
     const a = await axios.get(url)
     setData(a.data.results)
-    console.log(a.data.results)
   }
   useEffect(() => { getData() }, [id,category])
   return (

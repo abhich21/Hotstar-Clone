@@ -19,7 +19,6 @@ export function WatchList(){
                 }
               })
               const b = await a.json()
-              console.log({b})
               setData(b)
             }
     useEffect(()=>{ getWishlist()},[])
