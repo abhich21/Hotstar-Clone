@@ -87,6 +87,8 @@ In this project We have tried to make a look alike clone of Hotstar a video stre
 1. Landing page
 ![alt text](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/lanhot.png)
 ![alt text](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(2182).png)
+![alt text](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(613).png)
+
 
 2.Individual Video page
 ![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
