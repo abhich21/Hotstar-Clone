@@ -6,18 +6,20 @@ import { Card } from "../Card/Card";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
   
 
 
 function CardRows({ row_title, language }) { 
+  const{id, category} = useParams()
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const url = `https://hotstar-v.herokuapp.com/movies?language=${language || ""}`
+    const url = id?`https://api.themoviedb.org/3/${category}/${id}/similar?api_key=3d63cba818eb8bc583a23f643a655a3d`:`https://hotstar-v.herokuapp.com/movies?language=${language}`
     const a = await axios.get(url)
     setData(a.data.results)
   }
-  useEffect(() => { getData() }, [])
+  useEffect(() => { getData() }, [id])
   return (
     <div className="row-title">
       <h3>{row_title}</h3>
