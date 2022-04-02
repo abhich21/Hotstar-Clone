@@ -84,20 +84,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### Project:-
 In this project We have tried to make a look alike clone of Hotstar a video streaming Website. With our efforts and the technology stack, that we have learned in Masai School, we were able to clone the front end and backend as well.
 
-1. Landing page
-![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
-![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
-
-2.Individual Video page
-![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
+### 1. Landing page
+![landing](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/lanhot.png)
+![landing](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(2182).png)
+![landing](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(613).png)
 
 
-3. Log In/Sign Up page
+### 2.Individual Video page
+![individual video page](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(615).png)
+
+
+#### 3. Log In/Sign Up page
 ![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
 ![alt text](https://github.com/abhich/Hotstar-Cloneb/main/Screenshots/?raw=true)
 
 
-4. Wishlist page
+#### 4. Wishlist page
 ![alt text](https://github.com/RishabhTG209/KOOVS_Clone/blob/main/Screenshots/?raw=true)
 
 

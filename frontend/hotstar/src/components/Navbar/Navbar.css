@@ -85,5 +85,17 @@ body, ul, li {
        .small{
            display: none;
        }
+       .nav-left{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: 20px;
+    }
+    .nav-right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-right: 50px;
+    }
    }
 
