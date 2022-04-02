@@ -18,8 +18,6 @@ https://hotstar-v.herokuapp.com/search?q=[query]
 query : RRR | PUSHPA | 83  -->
 # Hotstar_Clone
 
-Backend : 
-
 Base-api : https://hotstar-v.herokuapp.com
 
 routes : 
@@ -38,7 +36,7 @@ Project Clone: https://hotstar.com
 
 We have created the clone of the Hotstar.com
 
-Deployment Link: https://
+Deployment Link: https://our-hotstar-project.vercel.app
 
 # Getting Started with Create React App
 
@@ -92,15 +90,12 @@ In this project We have tried to make a look alike clone of Hotstar a video stre
 
 ### 2.Individual Video page
 ![individual video page](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(615).png)
+![individual video page](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(2186).png)
 
 
 #### 3. Log In/Sign Up page
-![alt text](https://github.com/abhich/Hotstar-Clone/blob/main/Screenshots/?raw=true)
-![alt text](https://github.com/abhich/Hotstar-Cloneb/main/Screenshots/?raw=true)
-
-
-#### 4. Wishlist page
-![alt text](https://github.com/RishabhTG209/KOOVS_Clone/blob/main/Screenshots/?raw=true)
+![Log In/Sign Up page](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(2183).png)
+![Log In/Sign Up page](https://github.com/abhich21/Hotstar-Clone/blob/main/Screenshots/Screenshot%20(2188).png)
 
 
 
