@@ -151,7 +151,7 @@ function Navbar() {
           wordSpacing: "1.4px"
         }} className="text">Login to continue</p>
         <br></br>
-        <div className="epField">
+        {/* <div className="epField">
           <input onChange={handleInput} className="email" name="email" type="text" placeholder="Enter Your Email" /><br />
           <input onChange={handleInput} className="password" name="password" type="text" placeholder="Enter Your Password" />
         </div>
@@ -163,7 +163,7 @@ function Navbar() {
         <p style={{
           marginLeft: "45%"
         }}>or</p>
-        {/* <button className="btn">Have a Facebook/Email Account?</button> */}
+        <button className="btn">Have a Facebook/Email Account?</button> */}
         <div 
         className="googleBtn">
           <GoogleLogin
