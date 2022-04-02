@@ -142,7 +142,7 @@ function Navbar() {
       </Test>
       <Test otpTrigger={otpPopup} setOtpTrigger={setOtpPopup} setTrigger={setButtonPopup}>
         <p className="text">Enter the OTP</p>
-        <input type="number" className="otp-inp" placeholder="Enter OTP" onKeyDown={handleKeyDown} />
+        <input type="text" className="otp-inp" placeholder="Enter OTP" onKeyDown={handleKeyDown} />
       </Test>
       </div> 
       
