@@ -30,8 +30,8 @@ function Navbar() {
     navigate('/')
   }
   const handleLogin = async (googleData)=>{
-    const res2 = await axios.post('http://localhost:7000/google/login',{
-    // const res2 = await axios.post('https://hotstar-v.herokuapp.com/google/login',{
+    // const res2 = await axios.post('http://localhost:7000/google/login',{
+    const res2 = await axios.post('https://hotstar-v.herokuapp.com/google/login',{
       token : googleData.tokenId
     })
     localStorage.setItem('user', JSON.stringify(res2.data))
