@@ -116,3 +116,9 @@ margin-left: 10%;
   background-color: rgb(157, 161, 164);
   color : black;
 }
+.googleBtn{
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  
+}

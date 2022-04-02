@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search } from "../Search/Search";
 import axios from 'axios'
+import GoogleLogin from 'react-google-login';
 
 function Navbar() {
   const [ auth, setAuth] = useState(localStorage.getItem('token')? true : false)
@@ -69,7 +70,16 @@ function Navbar() {
     else
       alert('Please Login')
   }
-
+  const handleLogin = async (googleData)=>{
+    const res2 = await axios.post('http://localhost:7000/google/login',{
+      token : googleData.tokenId
+    })
+    localStorage.setItem('token', JSON.stringify(res2.data.token))
+    setAuth(true)
+  }
+  const handleFailure = (err)=>{
+    alert(err)
+  }
   return (
     <>
       <div className="nav">
@@ -153,7 +163,16 @@ function Navbar() {
         <p style={{
           marginLeft: "45%"
         }}>or</p>
-        <button className="btn">Have a Facebook/Email Account?</button>
+        {/* <button className="btn">Have a Facebook/Email Account?</button> */}
+        <div 
+        className="googleBtn">
+          <GoogleLogin
+        clientId={"470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"}
+        buttonText="Sign In With Google"
+        onSuccess={handleLogin}
+        onFailure={handleFailure}
+        cookiePolicy={'single_host_origin'}
+        /></div>
         <br></br>
         <p style={{
           marginLeft: "45%"
