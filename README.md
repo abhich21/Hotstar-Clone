@@ -18,8 +18,6 @@ https://hotstar-v.herokuapp.com/search?q=[query]
 query : RRR | PUSHPA | 83  -->
 # Hotstar_Clone
 
-Backend : 
-
 Base-api : https://hotstar-v.herokuapp.com
 
 routes : 
@@ -38,7 +36,7 @@ Project Clone: https://hotstar.com
 
 We have created the clone of the Hotstar.com
 
-Deployment Link: https://
+Deployment Link: https://our-hotstar-project.vercel.app
 
 # Getting Started with Create React App
 
