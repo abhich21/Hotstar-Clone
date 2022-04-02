@@ -1,7 +1,5 @@
 const express = require('express')
 const cors = require('cors')
-
-
 const mongodbConnect = require('./config/db')
 const movieController = require('./controllers/movie.controller')
 const { register, login } = require('./controllers/signinsignup.controller')

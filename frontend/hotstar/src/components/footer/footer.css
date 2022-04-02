@@ -99,16 +99,14 @@
     }
     .foot{
         width: 100%;
-        /* display: grid;
-        grid-template-columns: repeat(3,1fr); */
+       
         align-items: center;
         display: flex;
     }
     .foot-left1{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        /* display: flex; */
-        /* align-items: center; */
+        
         gap: 15px;
         margin-left: 20px;
         color: white;
@@ -116,12 +114,10 @@
     .foot-mid1{
         font-weight: bold;
         color: gray;
-        /* margin-left:15%; */
     }
     .foot-right1{
         font-weight: bold;
         color: gray;
-        /* margin-left:10%; */
         align-items: center;
         gap: 20px;
         margin-right: 20px;
