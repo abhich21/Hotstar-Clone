@@ -17,6 +17,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
       const a = await fetch('http://localhost:7000/watchlist',{
         method : "POST",
         body : JSON.stringify({
+          id:id,
           imageUrl : img,
           title :title,
           overview : description
@@ -25,6 +26,8 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
           "content-type" : "application/json",
           Authentication : `Bearer ${token}`
         }
+      }).then(()=>{
+        alert("added to wishlist")
       })
       const b = await a.json()
     }
@@ -33,7 +36,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
 
   }
   return (
-    <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm}`}>
+    <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm || id}`}>
       <div className="banner-container">
         <div className="banner-left">
           <div className="banner-details">
@@ -56,7 +59,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
               </div>
               </Link>
               <div>
-                <div>
+                <div className="playlist-btn">
                   <PlaylistAddRoundedIcon  onClick={addWatchList} fontSize="large"></PlaylistAddRoundedIcon>
                   watchlist
                 </div>

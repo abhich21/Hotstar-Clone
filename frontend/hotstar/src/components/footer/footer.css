@@ -68,3 +68,10 @@
 .foot-mid>span>a>img:hover,.foot-right>span>a>img{
     background-color: #1f80e0;
 }
+
+@media only screen and (max-width:667px){
+    .nav{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

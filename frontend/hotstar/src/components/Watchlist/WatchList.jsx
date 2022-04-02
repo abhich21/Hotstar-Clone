@@ -26,7 +26,7 @@ export function WatchList(){
         <div>
           <h3>Watchlist</h3>
            <div className="watchListRes">
-                {  data.map(el=> <Card key={el.id}  title={el.title} description={el.description} imageUrl={el.imageUrl} />)}
+                {  data.map(el=> <Card key={el.id} id={el.id}  title={el.title} description={el.description} imageUrl={el.imageUrl} />)}
            </div> 
         </div>
     )

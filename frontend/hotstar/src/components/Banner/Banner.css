@@ -124,7 +124,7 @@
   display: flex;
   align-items: center;
   gap: 100px;
-  color: #cdced1;
+  color: #a5a7ad;
   
 }
 
@@ -135,6 +135,9 @@
   font-size: 3px;
 }
 
+}
+.playlist-btn:hover{
+  color: white;
 }
 
 @media only screen and (min-width:768px) and (max-width:1024px){
