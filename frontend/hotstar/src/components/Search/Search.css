@@ -48,4 +48,30 @@
      border-bottom: 1px solid blue;
      width:280px;
  }
- 
+ @media only screen and (max-width:667px){
+    /* #searchBox{
+        position: absolute;
+        right: 50px;
+        z-index: 2;
+        background-color: #131a27;
+        margin: 5px 10px;
+        width: 100px;
+        min-height: 0px;
+        max-height: 450px;
+        padding:0px 7px;
+        background-color: none;
+        overflow: scroll;
+       } */
+       .hotstarSearch{
+        /* position: relative; */
+         width: 50px;
+         height: 32px;
+         border: none;
+         border-bottom: 1px solid white;
+         color: #a0a3a8;
+         font-size: 16px;
+         outline: 0;
+         padding: 0 28px 0 0px;
+         background: none;
+     }
+ }
