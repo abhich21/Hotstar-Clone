@@ -17,7 +17,7 @@ export const Card = ({ id, title, description, imageUrl, media_type }) => {
     getData();
   }, []);
   return (
-    <Link to={`/movie/${id}`}>
+    <Link to={`/${media_type || "movie"}/${id}`}>
       <div
         style={{
           backgroundImage: `url(${baseImgUrl + data.poster_path})`,
