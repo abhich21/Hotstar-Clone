@@ -9,8 +9,8 @@ export function WatchList(){
     const [ data , setData ] = useState([])
 
     async function getWishlist(){
-            const userToken = localStorage.getItem('token')
-            const token = JSON.parse(userToken)
+            const user = JSON.parse(localStorage.getItem('user'))
+            const {token }= user
             const a = await fetch('http://localhost:7000/watchlist',{
                 method : "GET",
                 headers : {
@@ -19,6 +19,7 @@ export function WatchList(){
                 }
               })
               const b = await a.json()
+              console.log({b})
               setData(b)
             }
     useEffect(()=>{ getWishlist()},[])
