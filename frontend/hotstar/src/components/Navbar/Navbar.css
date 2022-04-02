@@ -6,6 +6,9 @@
     align-items: center;
     background-color: #131a27;
     justify-content: space-between;
+    color: rgb(209, 209, 209);
+    font-weight: 600;
+    font-size: 18px;
 }
 .nav-left{
     display: flex;
@@ -22,6 +25,9 @@
 
 .nav-left>div{
     cursor: pointer;
+}
+.nav-left a:hover{
+    color: white;
 }
 .nav-right>div{
     cursor: pointer;

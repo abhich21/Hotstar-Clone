@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../Login/test.css";
 import Test from "../Login/Test";
 import { useState } from "react";
@@ -10,6 +10,7 @@ import GoogleLogin from 'react-google-login';
 
 function Navbar() {
   const [ auth, setAuth] = useState(localStorage.getItem('user')? true : false)
+  const{category} = useParams()
   const [buttonPopup, setButtonPopup] = useState(false);
   const [otpPopup, setOtpPopup] = useState(false);
   const navigate = useNavigate()
@@ -40,6 +41,8 @@ function Navbar() {
   const handleFailure = (err)=>{
     alert(err)
   }
+
+
   return (
     <>
       <div className="nav">
@@ -55,7 +58,7 @@ function Navbar() {
           </div>
 
           <div className="dropdown">
-            <Link className="link" to="/tv">TV</Link>
+            <Link className="link" to="/tv" >TV</Link>
             <ul>
               <li><Link to={"#"}>Other Shows</Link></li>
               <li><Link to={"#"}>Hotstar Specials</Link></li>
@@ -66,7 +69,7 @@ function Navbar() {
           </div>
 
           <div className="dropdown">
-            <Link className="link" to="/movie">MOVIES</Link>
+            <Link className="link" to="/movie">Movies</Link>
             <ul>
               <li><Link to={"#"}>Hindi</Link></li>
               <li><Link to={"#"}>Bengali</Link></li>
@@ -77,7 +80,7 @@ function Navbar() {
             </ul>
           </div>
           <div className="dropdown">
-            <Link className="link" to="/sports">SPORTS</Link>
+            <Link className="link" to="/sports">Sports</Link>
             <ul>
               <li><Link to={"#"}>Cricket</Link></li>
               <li><Link to={"#"}>Football</Link></li>
@@ -89,7 +92,7 @@ function Navbar() {
             </ul>
           </div>
           <div classaName="small">
-            <Link to="/disney+">DISNEY+</Link>
+            <Link to="/disney+">Disney+</Link>
           </div>
         </div>
         <div className="nav-right">
