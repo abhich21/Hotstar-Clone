@@ -40,6 +40,7 @@ function Navbar() {
     navigate('/profile')
   }
   const handleFailure = (err)=>{
+    console.log({ failure : err})
     alert(`failure : ${err}`)
   }
 
