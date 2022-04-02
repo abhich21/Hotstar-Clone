@@ -23,7 +23,7 @@ router.get('/', authenticate , async ( req, res)=>{
     }
 })
 
-router.post('/', async ( req, res)=>{
+router.post('/',authenticate, async ( req, res)=>{
     try {
         const user_id = req.body.user._id
         const body = { ...req.body, user_id: user_id}
@@ -41,7 +41,6 @@ router.post('/', async ( req, res)=>{
 })
 
 router.delete('/:id',async(req,res)=>{
-    console.log("checker",req.params.id);
     try {
         const item = await WishList.findByIdAndDelete(req.params.id);
     
