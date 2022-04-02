@@ -133,7 +133,7 @@ function Navbar() {
         }}>or</p>
         <br></br>
         <div className="input-div">
-          <p>+91|</p><input type="number" className="input" placeholder="Enter your mobile number" required />
+          <p>+91|</p><input type="text" className="input" placeholder="Enter your mobile number" required />
           <button onClick={() => {
             setOtpPopup(true);
             setButtonPopup(false)
