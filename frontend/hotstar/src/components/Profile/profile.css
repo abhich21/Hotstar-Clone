@@ -1,0 +1,41 @@
+.bottomdiv div{
+    height: 35px;
+    background-color: #192133;
+    color: white;
+    margin: 7px auto;
+    padding: 20px 21px 20px 22px;
+    font-size: 17px;
+}
+.containerdiv{
+    width: 30%;
+    margin: auto;
+}
+
+.topdiv{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+.topdiv div{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.topdiv img{
+    text-align: center;
+    margin: auto;
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    background: black;
+}
+
+.profileLogout{
+    cursor: pointer;
+}
