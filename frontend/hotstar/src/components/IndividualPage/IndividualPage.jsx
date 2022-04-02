@@ -40,13 +40,12 @@ useEffect(()=>{
   for(let i=0;i<wishdata.length;i++){
     if(data.original_title==wishdata[i].title){
       setStatus(true);
-      console.log(wishdata[i]._id);
       setWishid(wishdata[i]._id)
     }
   }
 });
 
-console.log(wishdata);
+// console.log(wishdata);
 
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'
 
