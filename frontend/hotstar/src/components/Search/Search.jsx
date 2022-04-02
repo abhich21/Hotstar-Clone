@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 export const Search = () => {
   const [text, setText] = useState("");
   const [data, setData] = useState([]);
-  console.log(text,data)
 
   const datafn = async () => {
 
@@ -53,7 +52,7 @@ export const Search = () => {
       {data.length!=0 && 
       <div id="searchBox">
         {data.map((el) => (
-            <Link to={`/category/${el.id}`} onClick={clearBtn}>
+            <Link to={`/movie/${el.id}`} onClick={clearBtn}>
                <Card path={el.backdrop_path} title={el.original_title} />
             </Link>
         ))}

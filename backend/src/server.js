@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const mongodbConnect = require('./config/db')
 const movieController = require('./controllers/movie.controller')
-const { register, login } = require('./controllers/account.controller')
+const { register, login } = require('./controllers/signinsignup.controller')
 const wishlistController = require('./controllers/wishlist.controller')
 const app = express()
 app.use(express.json())
@@ -13,9 +13,9 @@ app.use(cors())
 
 
 app.use('/', movieController)
-app.use('/resister',register)
-app.use('/login',login)
-app.use('wishlist',wishlistController)
+app.use('/signup',register)
+app.use('/signin',login)
+app.use('/watchlist',wishlistController)
 
 
 const port = process.env.PORT || 7000

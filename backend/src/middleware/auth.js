@@ -12,19 +12,19 @@ const tokenVerify = (token)=>{
 }
 
 const authenticate = async (req,res,next)=>{
-    if(!req.headers.authorization)
+    if(!req.headers.authentication)
         return res
         .status(400)
         .send({
-            message : "Token is not valid or not present"
+            message : "1.Token is not valid or not present"
         })
-    if(!req.headers.authorization.startsWith('Bearer ')) 
+    if(!req.headers.authentication.startsWith('Bearer ')) 
         return res
         .status(400)
         .send({
-            message : "Token is not valid or not present"
+            message : "2.Token is not valid or not present"
         })   
-    const token = req.headers.authorization.split(" ")[1]
+    const token = req.headers.authentication.split(" ")[1]
     let result
     try {
         result = await tokenVerify(token)
@@ -32,12 +32,13 @@ const authenticate = async (req,res,next)=>{
         return res
         .status(400)
         .send({
-            message : "Token is not valid or not present"
+            message : "3.Token is not valid or not present"
         })   
     }
 
     const user = result.user
     req.body.user = result.user
+    console.log({user})
     next()
 }
 
