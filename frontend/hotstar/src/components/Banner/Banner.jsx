@@ -9,15 +9,13 @@ import axios from "axios";
 import { useState } from "react";
 
 function Banner({Status,did,setStatus,title, year, genre, description, img, idm, mediaType }) {
-  const { id, category } = useParams();
-  console.log("checker");
+  const { id, category } = useParams()
 
   async function addWatchList(){
-    const userToken = localStorage.getItem('token')
-    {setStatus(true)}
-    if(userToken)
+    const user = localStorage.getItem('user')
+    if(user)
     {
-      const token = JSON.parse(userToken)
+      const {token} = JSON.parse(user)
       const a = await fetch('http://localhost:7000/watchlist',{
         method : "POST",
         body : JSON.stringify({
