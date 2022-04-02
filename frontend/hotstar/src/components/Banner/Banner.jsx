@@ -14,7 +14,6 @@ function Banner({original_title, title, year, genre, description, img, idm, medi
   const[wishid,setWishid]=useState("");
   const {id, category} = useParams();
   const [ wishdata , setWishData ] = useState([])
-  console.log(wishid);
 
   async function getWishlist(){
     const userToken = localStorage.getItem('token')
@@ -34,7 +33,6 @@ useEffect(()=>{ getWishlist()},[])
 useEffect(()=>{
   for(let i=0;i<wishdata.length;i++){
     if(original_title==wishdata[i].title){
-      console.log("coming");
       setStatus(true);
       setWishid(wishdata[i]._id)
     }
@@ -67,7 +65,6 @@ useEffect(()=>{
       });
       
       const b = await a.json()
-      console.log("data from the post request",b)
       setWishid(b._id)
     }
     else
@@ -79,9 +76,7 @@ useEffect(()=>{
 
    async function deleteWatchList(){
      setStatus(false);
-     console.log(Status,"working");
     {
-      console.log(`http://localhost:7000/watchlist/${wishid}`)
       const a = await fetch(`http://localhost:7000/watchlist/${wishid}`,{
       
         method : "DELETE",

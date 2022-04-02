@@ -62,23 +62,23 @@ function Navbar() {
           <div className="dropdown">
             <Link className="link" to="/tv" >TV</Link>
             <ul>
-              <li><Link to={"#"}>Other Shows</Link></li>
-              <li><Link to={"#"}>Hotstar Specials</Link></li>
-              <li><Link to={"#"}>Star Plus</Link></li>
-              <li><Link to={"#"}>Star Vijay</Link></li>
-              <li><Link to={"#"}>Asianet</Link></li>
+              <li><Link to={"/tv/en"}>Other Shows</Link></li>
+              <li><Link to={"/tv/hi"}>Hotstar Specials</Link></li>
+              <li><Link to={"/tv/te"}>Star Plus</Link></li>
+              <li><Link to={"/tv/ml"}>Star Vijay</Link></li>
+              <li><Link to={"/tv/ta"}>Asianet</Link></li>
             </ul>
           </div>
 
           <div className="dropdown">
             <Link className="link" to="/movie">Movies</Link>
             <ul>
-              <li><Link to={"#"}>Hindi</Link></li>
-              <li><Link to={"#"}>Bengali</Link></li>
-              <li><Link to={"#"}>Telugu</Link></li>
-              <li><Link to={"#"}>Malayalam</Link></li>
-              <li><Link to={"#"}>Tamil</Link></li>
-              <li><Link to={"#"}>Kannada</Link></li>
+              <li><Link to={"/movies/hi"}>Hindi</Link></li>
+              <li><Link to={"/movies/bn"}>Bengali</Link></li>
+              <li><Link to={"/movies/te"}>Telugu</Link></li>
+              <li><Link to={"/movies/ml"}>Malayalam</Link></li>
+              <li><Link to={"/movies/ta"}>Tamil</Link></li>
+              <li><Link to={"/movies/kn"}>Kannada</Link></li>
             </ul>
           </div>
           <div className="dropdown">

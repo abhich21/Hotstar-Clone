@@ -19,8 +19,6 @@ function IndividualPage(props) {
 
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'
   
-  console.log(data.original_title);
-  
   return (
     
     <div key={props.pageId}>
