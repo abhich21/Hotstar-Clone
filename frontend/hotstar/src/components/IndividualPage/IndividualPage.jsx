@@ -16,7 +16,8 @@ function IndividualPage(props) {
     async function getWishlist(){
             const userToken = localStorage.getItem('token')
             const token = JSON.parse(userToken)
-            const a = await fetch('http://localhost:7000/watchlist',{
+            // const a = await fetch('http://localhost:7000/watchlist',{
+            const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
                 method : "GET",
                 headers : {
                   "content-type" : "application/json",

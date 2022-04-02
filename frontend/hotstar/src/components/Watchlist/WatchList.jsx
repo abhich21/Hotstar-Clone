@@ -11,7 +11,8 @@ export function WatchList(){
     async function getWishlist(){
             const user = JSON.parse(localStorage.getItem('user'))
             const {token }= user
-            const a = await fetch('http://localhost:7000/watchlist',{
+            // const a = await fetch('http://localhost:7000/watchlist',{
+            const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
                 method : "GET",
                 headers : {
                   "content-type" : "application/json",
