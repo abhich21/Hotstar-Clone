@@ -1,12 +1,12 @@
 const { Router} = require('express')
 const { v4 : uuid } = require('uuid')
 const {OAuth2Client} = require('google-auth-library');
-const client = new OAuth2Client(process.env.APP_CLINT_ID);
+const APP_CLINT_ID="470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"
+const client = new OAuth2Client(APP_CLINT_ID);
 const User = require('../models/user.model')
 const { newToken } = require('../controllers/signinsignup.controller');
 const { authenticate } = require('../middleware/auth');
 const router = Router()
-const APP_CLINT_ID="470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"
 
 async function verify(token) {
     const ticket = await client.verifyIdToken({
