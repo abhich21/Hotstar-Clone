@@ -120,7 +120,8 @@ function Navbar() {
         <div 
         className="googleBtn">
           <GoogleLogin
-        clientId={"470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"}
+        // clientId={"470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"}
+        clientId="920450409324-dr6oficri8basjuvt765sag2njgub8du.apps.googleusercontent.com"
         buttonText="Sign In With Google"
         onSuccess={handleLogin}
         onFailure={handleFailure}
