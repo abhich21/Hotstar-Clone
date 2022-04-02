@@ -14,8 +14,13 @@ async function verify(token) {
         audience: process.env.APP_CLINT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
     })
     const payload = ticket.getPayload();
-    const userid = payload['sub'];
-    return ({ email : payload.email})
+    const userid = payload['sub']
+    const finalRes = {
+        email : payload.email,
+        name : payload.name,
+        picture: payload.picture,
+    }
+    return (finalRes)
 }
 router.post('/login' , async ( req, res)=>{
     try {
@@ -27,11 +32,18 @@ router.post('/login' , async ( req, res)=>{
             if(!user)
                 user = await User.create({
                     email : finalres.email,
+                    name : finalres.name,
+                    picture: finalres.picture,
                     password : uuid()
                 })
             let new_token = newToken(user)
             return res
-            .send({ token : new_token})
+            .send({ 
+                token : new_token,
+                email : user.email,
+                name : user.name,
+                picture: user.picture
+            })
         }
         else
             return res
