@@ -23,7 +23,7 @@ router.get('/', authenticate , async ( req, res)=>{
     }
 })
 
-router.post('/',authenticate, async ( req, res)=>{
+router.post('/', authenticate ,async ( req, res)=>{
     try {
         const user_id = req.body.user._id
         const body = { ...req.body, user_id: user_id}

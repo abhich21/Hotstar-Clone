@@ -17,7 +17,7 @@ function MainPage() {
   const getData = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movies"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
+        `https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movie"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
       )
       .then((res) => {
         setData(res.data.results);
@@ -28,7 +28,7 @@ function MainPage() {
     { category: "Popular Shows", language: "en" },
     { category: "Latest & Trending", language: "hi" },
     { category: "Shows Recommended For You", language: "ta" },
-    { category: "Popular Movies", language: "ml" },
+    { category: "Action", language: "ml" },
     { category: "Movies Recommended For You", language: "te" },
   ];
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'
@@ -57,6 +57,7 @@ function MainPage() {
           />
           ))}
       </Carousel>
+      <CardRows row_title={`Latest & Trending`} ></CardRows>
       {row_titles.map((el, index) => (
         <CardRows key={index} language={el.language} row_title={el.category} />
         ))}

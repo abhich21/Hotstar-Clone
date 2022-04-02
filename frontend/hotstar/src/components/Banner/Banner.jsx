@@ -47,12 +47,12 @@ useEffect(()=>{
 
 
   async function addWatchList(){
-    const userToken = localStorage.getItem('token')
-    {setStatus(true)}
-    if(userToken)
+    const user = localStorage.getItem('user')
+    if(user)
     {
-      const token = JSON.parse(userToken)
-      const a = await fetch('http://localhost:7000/watchlist',{
+      const {token} = JSON.parse(user)
+      // const a = await fetch('http://localhost:7000/watchlist',{
+      const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
         method : "POST",
         body : JSON.stringify({
           id:id,
@@ -71,7 +71,9 @@ useEffect(()=>{
       setWishid(b._id)
     }
     else
-      alert('Please SignIn to add this movie in your watchlist')
+      {
+        alert('Please SignIn to add this movie in your watchlist')
+      }
 
   }
 
