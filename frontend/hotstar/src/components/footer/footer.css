@@ -70,8 +70,8 @@
 }
 
 @media only screen and (max-width:667px){
-    .nav{
+    /* .nav{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-    }
+    } */
 }
