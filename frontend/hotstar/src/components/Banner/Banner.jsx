@@ -3,14 +3,18 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import PlaylistAddRoundedIcon from "@mui/icons-material/PlaylistAddRounded";
 import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
+import AddIcon from '@mui/icons-material/Add';
+import CheckIcon from '@mui/icons-material/Check';
 import axios from "axios";
+import { useState } from "react";
 
-function Banner({ title, year, genre, description, img, idm, mediaType }) {
+function Banner({Status,did,setStatus,title, year, genre, description, img, idm, mediaType }) {
   const { id, category } = useParams();
-
+  console.log("checker");
 
   async function addWatchList(){
     const userToken = localStorage.getItem('token')
+    {setStatus(true)}
     if(userToken)
     {
       const token = JSON.parse(userToken)
@@ -34,6 +38,14 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
     else
       alert('Please SignIn to add this movie in your watchlist')
 
+  }
+
+  async function deleteWatchList(){
+    {
+      const a = await fetch(`http://localhost:7000/watchlist/${did}`,{
+        method : "DELETE",
+      });
+    }
   }
   return (
     <Link  to={ mediaType=="tv"? `/tv/${idm}`:`/movie/${idm || id}`}>
@@ -64,7 +76,7 @@ function Banner({ title, year, genre, description, img, idm, mediaType }) {
                   watchlist
                 </div>
                 <div>
-                  <ShareRoundedIcon fontSize="large"></ShareRoundedIcon>
+                  <ShareRoundedIcon ></ShareRoundedIcon>
                   share
                 </div>
               </div>

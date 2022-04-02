@@ -1,4 +1,6 @@
 const { Router} = require('express')
+const express= require('express');
+const app=express();
 const { authenticate } = require('../middleware/auth')
 const WishList = require('../models/wishlist.model')
 const router = Router()
@@ -21,7 +23,7 @@ router.get('/', authenticate , async ( req, res)=>{
     }
 })
 
-router.post('/',authenticate, async ( req, res)=>{
+router.post('/', async ( req, res)=>{
     try {
         const user_id = req.body.user._id
         const body = { ...req.body, user_id: user_id}
@@ -36,6 +38,17 @@ router.post('/',authenticate, async ( req, res)=>{
             method : 'post'
         })
     }
+})
+
+router.delete('/:id',async(req,res)=>{
+    console.log("checker",req.params.id);
+    try {
+        const item = await WishList.findByIdAndDelete(req.params.id);
+    
+        return res.send(item);
+      } catch (err) {
+        return res.status(500).send(err.message);
+      }
 })
 
 module.exports = router
