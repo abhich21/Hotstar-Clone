@@ -36,7 +36,7 @@ Project Clone: https://hotstar.com
 
 We have created the clone of the Hotstar.com
 
-Deployment Link: https://our-hotstar-project.vercel.app
+Deployment Link: https://our-hotstar-project-vijendrasaini.vercel.app
 
 # Getting Started with Create React App
 
