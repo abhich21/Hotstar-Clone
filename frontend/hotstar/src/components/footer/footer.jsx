@@ -33,15 +33,10 @@ function Footer() {
         <span><a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-5.jpg"></img></a></span><span><a href="https://apps.apple.com/in/app/hotstar/id934459219"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-13.jpg"></img></a></span>
     </div>
     <div className="foot-mid1">
-      {/* <br></br> */}
         <div >Connect with us</div>
         <span><a href="https://facebook.com/DisneyPlusHotstar"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384021.png"></img></a></span><span><a href="https://twitter.com/DisneyPlusHS"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384049.png"></img></a></span>
         </div>
-        <div className="foot-right">
-        <div>Disney+Hotstar App</div>
-        <span><a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-5.jpg"></img></a></span><span><a href="https://apps.apple.com/in/app/hotstar/id934459219"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-13.jpg"></img></a></span>
-    </div>
-    <div className="foot-right1">
+        <div className="foot-right1">
         <div>Disney+Hotstar App</div>
         <span><a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-5.jpg"></img></a></span><span><a href="https://apps.apple.com/in/app/hotstar/id934459219"><img src="https://icon-library.com/images/download-on-the-app-store-icon/download-on-the-app-store-icon-13.jpg"></img></a></span>
     </div>
