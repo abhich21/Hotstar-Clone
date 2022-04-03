@@ -137,7 +137,7 @@ function Navbar() {
           <button onClick={() => {
             setOtpPopup(true);
             setButtonPopup(false)
-          }} className="otp-btn">send</button>
+          }} className="otp-btn">Next</button>
         </div>
       </Test>
       <Test otpTrigger={otpPopup} setOtpTrigger={setOtpPopup} setTrigger={setButtonPopup}>
