@@ -14,7 +14,7 @@ function AllRoutes() {
       <Routes>
         <Route path="/" element={<MainPage></MainPage>}></Route>
         <Route path="/:category" element={<MainPage ></MainPage>} ></Route>
-        <Route path="/:category/:language" element={<MainPage ></MainPage>} ></Route>
+        <Route path="/:category/:language/individual" element={<MainPage ></MainPage>} ></Route>
         <Route  path={`/:category/:id`}  element={<IndividualPage  ></IndividualPage>} ></Route>
         <Route path="/:category/:id/video" element={<VideoPage></VideoPage>}></Route>
         <Route path="/watchlist" element={<WatchList/>}></Route>
