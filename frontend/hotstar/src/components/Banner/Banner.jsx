@@ -46,6 +46,7 @@ useEffect(()=>{
 
 
   async function addWatchList(){
+    setStatus(true)
     const user = localStorage.getItem('user')
     if(user)
     {
