@@ -78,8 +78,7 @@ useEffect(()=>{
    async function deleteWatchList(){
      setStatus(false);
     {
-      // const a = await fetch(`http://localhost:7000/watchlist/${wishid}`,{
-      const a = await fetch(`https://hotstar-v.herokuapp.com/watchlist/${wishid}`,{
+      const a = await fetch(`http://localhost:7000/watchlist/${wishid}`,{
       
         method : "DELETE",
       });
