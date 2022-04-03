@@ -13,10 +13,9 @@
 
  #searchBox{
      position: absolute;
-     right: 150px;
      z-index: 2;
      background-color: #131a27;
-     margin: 5px 10px;
+     margin: 10px 0px;
      width: 300px;
      min-height: 0px;
      max-height: 450px;
