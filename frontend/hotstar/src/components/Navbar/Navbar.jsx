@@ -120,8 +120,8 @@ function Navbar() {
         <div 
         className="googleBtn">
           <GoogleLogin
-        // clientId={"470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"}
-        clientId="920450409324-dr6oficri8basjuvt765sag2njgub8du.apps.googleusercontent.com"
+        clientId={"470082525240-e74jps4n35c7d8kufu3ujo6veg77bi3k.apps.googleusercontent.com"}
+        // clientId="920450409324-dr6oficri8basjuvt765sag2njgub8du.apps.googleusercontent.com"
         buttonText="Sign In With Google"
         onSuccess={handleLogin}
         onFailure={handleFailure}
@@ -133,16 +133,16 @@ function Navbar() {
         }}>or</p>
         <br></br>
         <div className="input-div">
-          <p>+91|</p><input type="number" className="input" placeholder="Enter your mobile number" required />
+          <p>+91|</p><input type="text" className="input" placeholder="Enter your mobile number" required />
           <button onClick={() => {
             setOtpPopup(true);
             setButtonPopup(false)
-          }} className="otp-btn">send</button>
+          }} className="otp-btn">Next</button>
         </div>
       </Test>
       <Test otpTrigger={otpPopup} setOtpTrigger={setOtpPopup} setTrigger={setButtonPopup}>
         <p className="text">Enter the OTP</p>
-        <input type="number" className="otp-inp" placeholder="Enter OTP" onKeyDown={handleKeyDown} />
+        <input type="text" className="otp-inp" placeholder="Enter OTP" onKeyDown={handleKeyDown} />
       </Test>
       </div> 
       

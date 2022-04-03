@@ -104,4 +104,6 @@ body, ul, li {
         margin-right: 50px;
     }
    }
-
+    .input-div>input,.otp-inp{
+        outline: none;
+    }
