@@ -9,9 +9,7 @@ import { useParams } from "react-router-dom";
 function MainPage() {
   
   const {category,language} = useParams()
-  console.log(category,language);
   const [data, setData] = useState([]);
-  console.log(data);
 
   useEffect(() => {
     getData()
