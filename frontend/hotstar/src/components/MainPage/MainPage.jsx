@@ -8,21 +8,25 @@ import { useParams } from "react-router-dom";
 
 function MainPage() {
   
-  const {category} = useParams()
+  const {category,language} = useParams()
+  console.log(category,language);
   const [data, setData] = useState([]);
+  console.log(data);
+
   useEffect(() => {
     getData()
-  }, [category]);
+  }, [category,language]);
 
   const getData = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movie"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
+        `https://hotstar-v.herokuapp.com/${category}?language=${language?language:"en"}`
       )
       .then((res) => {
         setData(res.data.results);
       });
   };
+
   
   const row_titles = [
     { category: "Popular Shows", language: "en" },
