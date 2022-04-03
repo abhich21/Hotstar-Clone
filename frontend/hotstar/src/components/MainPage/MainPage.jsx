@@ -20,7 +20,7 @@ function MainPage() {
   const getData = () => {
     axios
       .get(
-        `https://hotstar-v.herokuapp.com/${category}?language=${language?language:"en"}`
+        `https://hotstar-v.herokuapp.com/${category || "movies"}?language=${language?language:"en"}`
       )
       .then((res) => {
         setData(res.data.results);

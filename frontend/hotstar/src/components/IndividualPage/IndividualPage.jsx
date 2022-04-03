@@ -18,6 +18,7 @@ function IndividualPage(props) {
   }
 
   let baseImgUrl = 'https://image.tmdb.org/t/p/original'
+  console.log("data is not coming",data);
   
   return (
     
