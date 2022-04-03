@@ -12,8 +12,10 @@ function IndividualPage(props) {
   
   const [data, setData] = useState({})
   const getData = async () => {
+    console.log({id, category})
     const url = `https://api.themoviedb.org/3/${category}/${id}?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
     const a = await axios.get(url)
+    console.log({a : a.data})
     setData(a.data)
   }
 

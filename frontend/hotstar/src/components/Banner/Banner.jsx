@@ -16,8 +16,8 @@ function Banner({original_title, title, year, genre, description, img, idm, medi
   const [ wishdata , setWishData ] = useState([])
 
   async function getWishlist(){
-    const userToken = localStorage.getItem('token')
-    const token = JSON.parse(userToken)
+    const user = localStorage.getItem('user')
+    const {token} = JSON.parse(user)
     // const a = await fetch('http://localhost:7000/watchlist',{
     const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
         method : "GET",
