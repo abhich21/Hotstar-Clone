@@ -18,7 +18,7 @@ function MainPage() {
   const getData = () => {
     axios
       .get(
-        `https://hotstar-v.herokuapp.com/${category||"movies"}?language=${language?language:"en"}`
+        `https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movie"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`
       )
       .then((res) => {
         setData(res.data.results);
