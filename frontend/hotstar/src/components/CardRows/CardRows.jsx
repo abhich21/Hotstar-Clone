@@ -3,14 +3,21 @@ import "./CardRows.css";
 import React from "react";
 import { width } from "@mui/system";
 import { Card } from "../Card/Card";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-  
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded'; 
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 
 
 function CardRows({ row_title, language }) { 
+  const ref = useRef(null);
+
+const scroll = (offset) => {
+  console.log(ref.current)
+  ref.current.scrollLeft += offset;
+};
   const{id, category} = useParams()
   const [data, setData] = useState([])
 
@@ -23,7 +30,10 @@ function CardRows({ row_title, language }) {
   return (
     <div className="row-title">
       <h3>{row_title}</h3>
-      <div className="card-container">
+      <div className="card-container" ref={ref}>
+        <ArrowForwardIosRoundedIcon onClick={()=>{scroll(1700)}} className="right-btn"></ArrowForwardIosRoundedIcon>
+        <ArrowBackIosRoundedIcon  onClick={()=>{scroll(-1700)}} className="left-btn"></ArrowBackIosRoundedIcon>
+        
         {data.map(el => <Card
           key={el.id}
           id={el.id}
@@ -34,6 +44,7 @@ function CardRows({ row_title, language }) {
                         Optio incidunt voluptas ipsam delectus sequi temporibus.`}
         />
         )}
+        
       </div>
     </div>
   );
