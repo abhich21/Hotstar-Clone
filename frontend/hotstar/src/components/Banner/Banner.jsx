@@ -46,7 +46,6 @@ useEffect(()=>{
 
 
   async function addWatchList(){
-    setStatus(true)
     const user = localStorage.getItem('user')
     if(user)
     {
@@ -68,6 +67,7 @@ useEffect(()=>{
       
       const b = await a.json()
       setWishid(b._id)
+      setStatus(true)
     }
     else
       {
