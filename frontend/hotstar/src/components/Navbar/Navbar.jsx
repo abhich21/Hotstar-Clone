@@ -62,11 +62,11 @@ function Navbar() {
           <div className="dropdown">
             <Link className="link" to="/tv" >TV</Link>
             <ul>
-              <li><Link to={"/tv/en"}>Other Shows</Link></li>
-              <li><Link to={"/tv/hi"}>Hotstar Specials</Link></li>
-              <li><Link to={"/tv/te"}>Star Plus</Link></li>
-              <li><Link to={"/tv/ml"}>Star Vijay</Link></li>
-              <li><Link to={"/tv/ta"}>Asianet</Link></li>
+              <li><Link to={"/tv/en/individual"}>Other Shows</Link></li>
+              <li><Link to={"/tv/hi/individual"}>Hotstar Specials</Link></li>
+              <li><Link to={"/tv/te/individual"}>Star Plus</Link></li>
+              <li><Link to={"/tv/ml/individual"}>Star Vijay</Link></li>
+              <li><Link to={"/tv/ta/individual"}>Asianet</Link></li>
             </ul>
           </div>
 
@@ -137,7 +137,7 @@ function Navbar() {
           <button onClick={() => {
             setOtpPopup(true);
             setButtonPopup(false)
-          }} className="otp-btn">Next</button>
+          }} className="otp-btn">send</button>
         </div>
       </Test>
       <Test otpTrigger={otpPopup} setOtpTrigger={setOtpPopup} setTrigger={setButtonPopup}>

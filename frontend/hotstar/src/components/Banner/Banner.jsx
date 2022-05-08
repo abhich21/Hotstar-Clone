@@ -16,9 +16,10 @@ function Banner({original_title, title, year, genre, description, img, idm, medi
   const [ wishdata , setWishData ] = useState([])
 
   async function getWishlist(){
-    const userToken = localStorage.getItem('token')
-    const token = JSON.parse(userToken)
-    const a = await fetch('http://localhost:7000/watchlist',{
+    const user = localStorage.getItem('user')
+    const {token} = JSON.parse(user)
+    // const a = await fetch('http://localhost:7000/watchlist',{
+    const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
         method : "GET",
         headers : {
           "content-type" : "application/json",
@@ -67,6 +68,7 @@ useEffect(()=>{
       
       const b = await a.json()
       setWishid(b._id)
+      setStatus(true)
     }
     else
       {
@@ -78,7 +80,8 @@ useEffect(()=>{
    async function deleteWatchList(){
      setStatus(false);
     {
-      const a = await fetch(`http://localhost:7000/watchlist/${wishid}`,{
+      // const a = await fetch(`http://localhost:7000/watchlist/${wishid}`,{
+      const a = await fetch(`https://hotstar-v.herokuapp.com/watchlist/${wishid}`,{
       
         method : "DELETE",
       });
