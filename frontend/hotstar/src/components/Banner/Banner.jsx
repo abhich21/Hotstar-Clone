@@ -45,12 +45,13 @@ useEffect(()=>{
 
 
   async function addWatchList(){
+    setStatus(true);
     const user = localStorage.getItem('user')
     if(user)
     {
       const {token} = JSON.parse(user)
       // const a = await fetch('http://localhost:7000/watchlist',{
-      const a = await fetch('https://hotstar-v.herokuapp.com/watchlist',{
+      const a = await fetch('http://localhost:7000/watchlist',{
         method : "POST",
         body : JSON.stringify({
           id:id,
