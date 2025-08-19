@@ -24,7 +24,7 @@ function IndividualPage(props) {
   return (
     
     <div key={props.pageId}>
-      <Banner original_title={data.original_title} id={id}  img={`${baseImgUrl}${data.backdrop_path}`  } title={data.original_title || data.name} description={data.overview}></Banner>
+      <Banner original_title={data.original_title} id={id}  img={`${baseImgUrl}${data.poster_path?data.poster_path:data.backdrop_path}`  } title={data.original_title || data.name} description={data.overview} language={data.original_language}></Banner>
       <CardRows language={data.original_language} row_title="More Like This"></CardRows>
     </div>
   )
