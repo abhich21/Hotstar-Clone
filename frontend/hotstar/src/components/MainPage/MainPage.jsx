@@ -4,21 +4,26 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CardRows from "../CardRows/CardRows";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 function MainPage() {
   
   const {category,language} = useParams()
   const [data, setData] = useState([]);
+  const [searchParams] = useSearchParams();
+  const lang = searchParams.get('lang');
 
   useEffect(() => {
+    // console.log("lang: ", lang);
     getData()
-  }, [category,language]);
+  }, [category,language, lang]);
 
   const getData = () => {
     axios
       .get(
-        `https://hotstar-v.herokuapp.com/${category || "movies"}?language=${language?language:"en"}`
+        `http://api.themoviedb.org/3/discover/${category || "movie"}?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&include_adult=false&include_video=true&with_original_language=${lang?lang:language?language:"en"}&language=${language?language:"en"}&sort_by=original_title.asc&year=2025&page=1`
+        // `https://hotstar-v.herokuapp.com/${category || "movies"}?language=${language?language:"en"}`
+        // `http://localhost:7000/${category || "movies"}?language=${language?language:"en-US"}`
       )
       .then((res) => {
         setData(res.data.results);
@@ -49,12 +54,12 @@ function MainPage() {
           <Banner
           idm ={el.id}
           key={index}
-          img={`${baseImgUrl}${el.backdrop_path}`}
+          img={`${baseImgUrl}${el.poster_path?el.poster_path:el.backdrop_path}`}
           title={el.title || el.name}
           genre={el.genre}
           description={el.overview}
           mediaType = {el.media_type}
-          
+          language = {el.original_language}
           
           />
           ))}
