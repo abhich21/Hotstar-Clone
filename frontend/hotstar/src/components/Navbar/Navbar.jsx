@@ -73,12 +73,12 @@ function Navbar() {
           <div className="dropdown">
             <Link className="link" to="/movie">Movies</Link>
             <ul>
-              <li><Link to={"/movies/hi"}>Hindi</Link></li>
-              <li><Link to={"/movies/bn"}>Bengali</Link></li>
-              <li><Link to={"/movies/te"}>Telugu</Link></li>
-              <li><Link to={"/movies/ml"}>Malayalam</Link></li>
-              <li><Link to={"/movies/ta"}>Tamil</Link></li>
-              <li><Link to={"/movies/kn"}>Kannada</Link></li>
+              <li><Link to={"/movie?lang=hi"}>Hindi</Link></li>
+              <li><Link to={"/movie?lang=bn"}>Bengali</Link></li>
+              <li><Link to={"/movie?lang=te"}>Telugu</Link></li>
+              <li><Link to={"/movie?lang=ml"}>Malayalam</Link></li>
+              <li><Link to={"/movie?lang=ta"}>Tamil</Link></li>
+              <li><Link to={"/movie?lang=kn"}>Kannada</Link></li>
             </ul>
           </div>
           <div className="dropdown">
