@@ -22,7 +22,7 @@ const scroll = (offset) => {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const url = id?`https://api.themoviedb.org/3/${category}/${id}/similar?api_key=3d63cba818eb8bc583a23f643a655a3d`:!language?`https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movie"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`:`https://hotstar-v.herokuapp.com/movies?language=${language}`
+    const url = id?`https://api.themoviedb.org/3/${category}/${id}/similar?api_key=3d63cba818eb8bc583a23f643a655a3d`:!language?`https://api.themoviedb.org/3/trending/${category=="tv"?"tv":category=="movie"?"movie":"all"}/week?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&language=en-US`:`http://api.themoviedb.org/3/discover/movie?api_key=3e3f0a46d6f2abc8e557d06b3fc21a77&include_adult=false&include_video=true&with_original_language=${language?language:"en"}&language=${language?language:"en"}&sort_by=original_title.asc&year=2025`
     const a = await axios.get(url)
     setData(a.data.results)
   }
